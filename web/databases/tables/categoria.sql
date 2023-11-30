@@ -31,7 +31,8 @@ INSERT INTO `categoria` (`id`, `nome`, `peso`, `pagina_id`) VALUES
 (9, 'Croissants Doces - 350g', '350g', 'croissants'),
 (10, 'Esfihas - 1,2Kg', '1,2Kg', 'esfihas'),
 (11, 'Croissants - 1,2Kg', '1,2Kg', 'croissants'),
-(12, 'Croissants Doces - 1,2Kg', '1,2Kg', 'croissants');
+(12, 'Croissants Doces - 1,2Kg', '1,2Kg', 'croissants'),
+(13, 'Outros Produtos - 400g', '400g', 'outros');
 
 --
 -- Índices para tabelas despejadas
@@ -52,7 +53,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de tabela `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restrições para tabelas despejadas

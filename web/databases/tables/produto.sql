@@ -54,7 +54,20 @@ INSERT INTO `produto` (`id`, `nome`, `titulo_da_imagem`, `descricao`, `mensagem_
 (32, 'Esfiha de Frango', 'esfiha-de-frango-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Esfiha%20de%20Frango%20350g.', 7),
 (33, 'Esfiha de Palmito', 'esfiha-de-palmito-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Esfiha%20de%20Palmito%20350g.', 7),
 (34, 'Esfiha Multigrãos', 'esfiha-multigraos-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Esfiha%20Multigr%C3%A3os%20350g.', 7),
-(35, 'Esfiha Sabor Pizza', 'esfiha-sabor-pizza-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Esfiha%20Sabor%20Pizza%20350g.', 7);
+(35, 'Esfiha Sabor Pizza', 'esfiha-sabor-pizza-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Esfiha%20Sabor%20Pizza%20350g.', 7),
+(36, 'Croissant Sabor Pizza', 'croissant-sabor-pizza-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20Sabor%20Pizza%20350g.', 8),
+(37, 'Croissant de Carne', 'croissant-de-carne-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Carne%20350g.', 8),
+(38, 'Croissant de Frango', 'croissant-de-frango-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Frango%20350g.', 8),
+(39, 'Croissant de Palmito', 'croissant-de-palmito-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Palmito%20350g.', 8),
+(40, 'Croissant de Chocolate Preto', 'croissant-de-chocolate-preto-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Chocolate%20Preto%20350g.', 9),
+(41, 'Croissant de Banana com Canela', 'croissant-de-banana-com-canela-350g.png', 'Peso líquido: 350g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Banana%20com%20Canela%20350g.', 9),
+(42, 'Croissant Sabor Pizza', 'croissant-sabor-pizza-1,2kg.png', 'Peso líquido: 1,2Kg', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20Sabor%20Pizza%201,2Kg.', 11),
+(43, 'Croissant de Frango', 'croissant-de-frango-1,2kg.png', 'Peso líquido: 1,2Kg', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Frango%201,2Kg.', 11),
+(44, 'Croissant de Carne', 'croissant-de-carne-1,2kg.png', 'Peso líquido: 1,2Kg', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Carne%201,2Kg.', 11),
+(45, 'Croissant de Chocolate Preto', 'croissant-de-chocolate-preto-1,2kg.png', 'Peso líquido: 1,2Kg', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Croissant%20de%20Chocolate%20Preto%201,2Kg.', 12),
+(46, 'Esfiha de Frango', 'esfiha-de-frango-1,2kg.png', 'Peso líquido: 1,2Kg', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Esfiha%20de%20Frango%201,2Kg.', 10),
+(47, 'Esfiha de Carne', 'esfiha-de-carne-1,2kg.png', 'Peso líquido: 1,2Kg', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Esfiha%20de%20Carne%201,2Kg.', 10),
+(48, 'Charuto de Repolho', 'charuto-de-repolho-400g.png', 'Peso líquido: 400g', 'Ol%C3%A1,%20estou%20interessado%20no%20produto:%20Charuto%20de%20Repolho%20400g.', 13);
 
 --
 -- Índices para tabelas despejadas
@@ -75,7 +88,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- Restrições para tabelas despejadas

@@ -1,3 +1,7 @@
-CREATE DATABASE massaschasko;
+--
+-- Banco de dados: `massaschasko`
+--
 
--- EXECUTADO
+-- --------------------------------------------------------
+
+CREATE DATABASE massaschasko;
