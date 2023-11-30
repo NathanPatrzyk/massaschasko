@@ -1,10 +1,13 @@
+<?php
+    include './connection/connection.php';
+?>
 <nav class="navbar navbar-expand navbar-dark bg-success d-sm-block d-none fixed-top">
     <div class="container-fluid">
-        <a href="./index.php" class="navbar-brand mx-5">
+        <a href="./index.php" class="navbar-brand mx-3">
             <img src="./img/massaschasko.png">
         </a>
-        <ul class="navbar-nav justify-content-end mx-5 px-5">
-            <li class="nav-item dropdown mx-5">
+        <ul class="navbar-nav justify-content-end mx-3 px-3">
+            <li class="nav-item dropdown mx-3">
                 <a href="" class="nav-link active" data-bs-toggle="dropdown">Início</a>
                 <ul class="dropdown-menu bg-success">
                     <li class="bg-success">
@@ -17,6 +20,9 @@
                         <a href="./index.php#redes-sociais" class="dropdown-item text-light bg-success active">Redes Sociais</a>
                     </li>
                 </ul>
+            </li>
+            <li class="nav-item dropdown mx-3">
+                <a href="" class="nav-link active" data-bs-toggle="dropdown">Nossos Produtos</a>
             </li>
         </ul>
     </div>
@@ -43,6 +49,9 @@
                 </li>
                 <li class="nav-item mx-3">
                     <a href="./index.php#redes-sociais" class="nav-link active">Redes Sociais</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./produtos.php?id=todos" class="nav-link active">Nossos Produtos</a>
                 </li>
             </ul>
         </div>

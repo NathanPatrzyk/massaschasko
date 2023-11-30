@@ -1,10 +1,16 @@
+<?php
+    include './connection/connection.php';
+?>
 <footer>
-        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 bg-success">
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-top p-4 p-md-5 bg-success">
             <div class="container-fluid py-3 p-0 p-md-3 mx-auto">
                 <a href="./index.php" class="py-1 text-decoration-none active d-block text-light">Início</a>
                 <a href="./index.php" class="py-1 text-decoration-none active d-block text-light">Massas e Salgados</a>
                 <a href="./index.php#endereco" class="py-1 text-decoration-none active d-block text-light">Endereço</a>
                 <a href="./index.php#redes-sociais" class="py-1 text-decoration-none active d-block text-light">Redes Sociais</a>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 mx-auto">
+                <a href="./produtos.php?id=todos" class="py-1 text-decoration-none active d-block text-light">Nossos Produtos</a>
             </div>
             <div class="container-fluid py-3 p-0 p-md-3">
                 <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone=5542998138118&text&type=phone_number&app_absent=0" target="_blank">
