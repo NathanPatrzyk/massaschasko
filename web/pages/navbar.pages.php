@@ -1,5 +1,5 @@
 <?php
-    include './connection/connection.php';
+    include './php/listarPaginas.php';
 ?>
 <nav class="navbar navbar-expand navbar-dark bg-success d-sm-block d-none fixed-top">
     <div class="container-fluid">
@@ -23,6 +23,21 @@
             </li>
             <li class="nav-item dropdown mx-3">
                 <a href="" class="nav-link active" data-bs-toggle="dropdown">Nossos Produtos</a>
+                <ul class="dropdown-menu bg-success">
+                    <li class="bg-success">
+                        <a href="./produtos.php?id=todos" class="dropdown-item text-light bg-success active">Todos os Produtos</a>
+                    </li>
+                    <?php foreach($listaDePaginas as $pagina): ?>
+                        <?php if($pagina['id']!="outros"): ?>
+                            <li class="bg-success">
+                                <a href="./produtos.php?id=<?=$pagina['id']?>" class="dropdown-item text-light bg-success active"><?=$pagina['nome']?></a>
+                            </li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    <li class="bg-success">
+                        <a href="./produtos.php?id=outros" class="dropdown-item text-light bg-success active">Outros Produtos</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -52,6 +67,19 @@
                 </li>
                 <li class="nav-item">
                     <a href="./produtos.php?id=todos" class="nav-link active">Nossos Produtos</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a href="./produtos.php?id=todos" class="nav-link active">Todos os Produtos</a>
+                </li>
+                <?php foreach($listaDePaginas as $pagina): ?>
+                    <?php if($pagina['id']!="outros"): ?>
+                        <li class="nav-item mx-3">
+                            <a href="./produtos.php?id=<?=$pagina['id']?>" class="nav-link active"><?=$pagina['nome']?></a>
+                        </li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                <li class="nav-item mx-3">
+                    <a href="./produtos.php?id=outros" class="nav-link active">Outros Produtos</a>
                 </li>
             </ul>
         </div>
