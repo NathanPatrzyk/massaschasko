@@ -1,10 +1,10 @@
 <?php
-    include './php/listarPaginas.php';
+    include './app/listarPaginas.php';
 ?>
 <nav class="navbar navbar-expand navbar-dark bg-success d-sm-block d-none fixed-top">
     <div class="container-fluid">
         <a href="./index.php" class="navbar-brand mx-3">
-            <img src="./img/massaschasko.png">
+            <img src="./assets/img/massaschasko.png">
         </a>
         <ul class="navbar-nav justify-content-end mx-3 px-3">
             <li class="nav-item dropdown mx-3">
@@ -46,7 +46,7 @@
 <nav class="navbar navbar-dark bg-success d-sm-none d-block fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="./index.php">
-            <img src="./img/massaschasko.png">
+            <img src="./assets/img/massaschasko.png">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <i class="bi bi-list text-white" style="font-size: 40px"></i>

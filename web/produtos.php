@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <?php
     include './connection/connection.php';
+
+    $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING);
+
+    if(empty($id)){
+        echo "Erro! Código da tarefa está nulo.";
+    }
+    else{
+        if($id == "todos"){
+            $query = "SELECT nome FROM categoria";
+            $stm = $connection->prepare($query);
+        }
+        else{
+            $query = "SELECT nome FROM categoria WHERE pagina_id=:pagina_id";
+            $stm = $connection->prepare($query);
+            $stm->bindParam('pagina_id', $id);
+        }
+        $stm->execute();
+        $listaDeCategorias = $stm->fetchAll(PDO::FETCH_ASSOC);
+    }
 ?>
 <html lang="pt-BR">
 <head>
@@ -23,7 +42,9 @@
     <?php
         include './pages/navbar.pages.php';
     ?>
-
+    <?php foreach($listaDeCategorias as $categoria): ?>
+        <p><?=$categoria['nome']?></p>
+    <?php endforeach; ?>
     <?php
         include './pages/footer.pages.php';
     ?>

@@ -1,5 +1,5 @@
 <?php
-    include './connection/connection.php';
+    include './app/listarPaginas.php';
 ?>
 <footer>
         <div class="container-fluid d-block d-md-flex gap-3 align-items-top p-4 p-md-5 bg-success">

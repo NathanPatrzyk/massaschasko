@@ -10,7 +10,7 @@
     
     <style>
         main{
-            background: url(./img/main-bg.png) bottom;
+            background: url(./assets/img/main-bg.png) bottom;
         }
         body{
             padding-top: 71px;
@@ -34,14 +34,14 @@
                 </p>
             </div>
             <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
-                <img src="./img/main.png" width="320" height="320">
+                <img src="./assets/img/main.png" width="320" height="320">
             </div>
         </div>
     </main>
     <section>
         <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5">
             <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
-                <img src="./img/section-a.png" width="320" height="320">
+                <img src="./assets/img/section-a.png" width="320" height="320">
             </div>
             <div class="container-fluid py-3 p-0 p-md-3">
                 <h2 class="h1 pb-3">Pierogues</h2>
@@ -87,7 +87,7 @@
     <section id="redes-sociais">
         <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 p-4 bg-dark">
             <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
-                <img src="./img/section-b.png" width="320" height="320">
+                <img src="./assets/img/section-b.png" width="320" height="320">
             </div>
             <div class="container-fluid py-3 p-0 p-md-3">
                 <h2 class="h1 pb-3 text-light">Redes Sociais</h2>
