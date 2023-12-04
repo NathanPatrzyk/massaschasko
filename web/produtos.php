@@ -9,11 +9,11 @@
     }
     else{
         if($id == "todos"){
-            $query = "SELECT nome FROM categoria";
+            $query = "SELECT id, nome FROM categoria";
             $stm = $connection->prepare($query);
         }
         else{
-            $query = "SELECT nome FROM categoria WHERE pagina_id=:pagina_id";
+            $query = "SELECT id, nome FROM categoria WHERE pagina_id=:pagina_id";
             $stm = $connection->prepare($query);
             $stm->bindParam('pagina_id', $id);
         }
@@ -43,7 +43,21 @@
         include './pages/navbar.pages.php';
     ?>
     <?php foreach($listaDeCategorias as $categoria): ?>
-        <p><?=$categoria['nome']?></p>
+        <h2><?=$categoria['nome']?></h2>
+
+        <?php
+            $query = "SELECT id, nome FROM produto WHERE categoria_id=:categoria_id";
+            $stm = $connection->prepare($query);
+            $stm->bindParam('categoria_id', $categoria['id']);
+            $stm->execute();
+            $listaDeProdutos = $stm->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+
+        <?php foreach($listaDeProdutos as $produto): ?>
+            <p><?=$produto['nome']?></p>
+
+        <?php endforeach; ?>
+
     <?php endforeach; ?>
     <?php
         include './pages/footer.pages.php';
