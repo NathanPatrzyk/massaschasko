@@ -42,23 +42,32 @@
     <?php
         include './pages/navbar.pages.php';
     ?>
-    <?php foreach($listaDeCategorias as $categoria): ?>
-        <h2><?=$categoria['nome']?></h2>
+    <section>
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5">
+            <div class="container-fluid py-3 p-0 p-md-3">
+                <?php foreach($listaDeCategorias as $categoria): ?>
+                    <h2 class="h1 pb-2 border-bottom border-2 border-success"><?=$categoria['nome']?></h2>
 
-        <?php
-            $query = "SELECT id, nome FROM produto WHERE categoria_id=:categoria_id";
-            $stm = $connection->prepare($query);
-            $stm->bindParam('categoria_id', $categoria['id']);
-            $stm->execute();
-            $listaDeProdutos = $stm->fetchAll(PDO::FETCH_ASSOC);
-        ?>
+                    <?php
+                        $query = "SELECT * FROM produto WHERE categoria_id=:categoria_id";
+                        $stm = $connection->prepare($query);
+                        $stm->bindParam('categoria_id', $categoria['id']);
+                        $stm->execute();
+                        $listaDeProdutos = $stm->fetchAll(PDO::FETCH_ASSOC);
+                    ?>
 
-        <?php foreach($listaDeProdutos as $produto): ?>
-            <p><?=$produto['nome']?></p>
+                    <?php foreach($listaDeProdutos as $produto): ?>
+                        <img src="./assets/img/produtos/<?=$produto['titulo_da_imagem']?>" width="160" height="200">
+                        <p><?=$produto['nome']?></p>
 
-        <?php endforeach; ?>
+                    <?php endforeach; ?>
 
-    <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+    </section>
+    
     <?php
         include './pages/footer.pages.php';
     ?>
