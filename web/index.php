@@ -60,7 +60,7 @@
         <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 bg-dark">
             <div class="container-fluid py-0 p-0 p-md-3 d-sm-flex d-block gap-3 justify-content-center">
                 <p class="h1 text-light text-sm-left text-center">Faça Seu Pedido:</p>
-                <a href="https://api.whatsapp.com/send/?phone=5542998138118&text&type=phone_number&app_absent=0" target="_blank">
+                <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone=5542998138118&text&type=phone_number&app_absent=0" target="_blank">
                     <button class="btn btn-success btn-lg d-sm-inline d-block mx-sm-0 mx-auto">(42) 9 9813-8118 <i class="bi bi-whatsapp"></i></button>
                 </a>
             </div>

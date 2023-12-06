@@ -57,9 +57,14 @@
                     ?>
 
                     <?php foreach($listaDeProdutos as $produto): ?>
-                        <img src="./assets/img/produtos/<?=$produto['titulo_da_imagem']?>" width="160" height="200">
-                        <p><?=$produto['nome']?></p>
-
+                        <div class="container-fluid p-3">
+                            <img src="./assets/img/produtos/<?=$produto['titulo_da_imagem']?>" width="160" height="200">
+                            <p><?=$produto['nome']?></p>
+                            <p><?=$produto['descricao']?></p>
+                            <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone=5542998138118&text=<?=$produto['mensagem_de_texto']?>&type=phone_number&app_absent=0" target="_blank">
+                                <button class="btn btn-success d-block">Faça seu pedido <i class="bi bi-whatsapp"></i></button>
+                            </a>
+                        </div>
                     <?php endforeach; ?>
 
                 <?php endforeach; ?>
