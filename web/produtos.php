@@ -37,6 +37,9 @@
         body{
             padding-top: 71px;
         }
+        .produtos{
+            grid-template-columns: repeat(auto-fit, 144px);
+        }
     </style>
 <body>
     <?php
@@ -55,17 +58,23 @@
                         $stm->execute();
                         $listaDeProdutos = $stm->fetchAll(PDO::FETCH_ASSOC);
                     ?>
+                    
+                    <div class="produtos container-fluid d-grid justify-content-center justify-items-center gap-1 gap-md-3 px-0 px-md-3">
+                        <?php foreach($listaDeProdutos as $produto): ?>
+                            <div class="produto container-fluid px-0 px-md-1 py-4">
+                                <img class="d-block mx-auto" src="./assets/img/produtos/<?=$produto['titulo_da_imagem']?>" width="138" height="190">
 
-                    <?php foreach($listaDeProdutos as $produto): ?>
-                        <div class="container-fluid p-3">
-                            <img src="./assets/img/produtos/<?=$produto['titulo_da_imagem']?>" width="160" height="200">
-                            <p><?=$produto['nome']?></p>
-                            <p><?=$produto['descricao']?></p>
-                            <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone=5542998138118&text=<?=$produto['mensagem_de_texto']?>&type=phone_number&app_absent=0" target="_blank">
-                                <button class="btn btn-success d-block">Faça seu pedido <i class="bi bi-whatsapp"></i></button>
-                            </a>
-                        </div>
-                    <?php endforeach; ?>
+                                <div class="text">
+                                    <h3 class="h4 pt-3 pb-2 m-0"><?=$produto['nome']?></h3>
+                                    <p class="pt-2 pb-3 m-0"><?=$produto['descricao']?></p>
+                                </div>
+                                
+                                <a class="d-flex justify-content-center text-decoration-none" href="https://api.whatsapp.com/send/?phone=5542998138118&text=<?=$produto['mensagem_de_texto']?>&type=phone_number&app_absent=0" target="_blank">
+                                    <button class="btn btn-success px-2">Fazer pedido <i class="bi bi-whatsapp"></i></button>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
 
                 <?php endforeach; ?>
             </div>
