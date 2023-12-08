@@ -39,11 +39,8 @@
         </div>
     </main>
     <section>
-        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5">
-            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
-                <img src="./assets/img/section-a.png" width="320" height="320">
-            </div>
-            <div class="container-fluid py-3 p-0 p-md-3">
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 order-md-first order-last">
+            <div class="container-fluid py-3 p-0 p-md-3 order-last">
                 <h2 class="h1 pb-3">Pierogues</h2>
                 <p class="h5">
                     Tradição dos imigrantes poloneses, o pierogue
@@ -53,6 +50,9 @@
                     Massas Chasko por ser um dos mais procurados
                     pelos consumidores.
                 </p>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
+                <img src="./assets/img/section-a.png" width="320" height="320">
             </div>
         </div>
     </section>
@@ -86,10 +86,7 @@
     </section>
     <section id="redes-sociais">
         <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 p-4 bg-dark">
-            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
-                <img src="./assets/img/section-b.png" width="320" height="320">
-            </div>
-            <div class="container-fluid py-3 p-0 p-md-3">
+            <div class="container-fluid py-3 p-0 p-md-3 order-last">
                 <h2 class="h1 pb-3 text-light">Redes Sociais</h2>
                 <p class="h5 text-light">Instagram</p>
                 <a href="https://www.instagram.com/massas_chasko/" target="_blank">
@@ -99,6 +96,9 @@
                 <a href="https://www.facebook.com/massaschasko" target="_blank">
                     <button class="btn btn-success mb-md-3">Massas Chasko <i class="bi bi-facebook"></i></button>
                 </a>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
+                <img src="./assets/img/section-b.png" width="320" height="320">
             </div>
         </div>
     </section>
