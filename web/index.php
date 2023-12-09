@@ -25,13 +25,16 @@
         <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5">
             <div class="container-fluid py-3 p-0 p-md-3">
                 <h1 class="pb-3 text-light">Massas e Salgados</h1>
-                <p class="h5 text-light">
+                <p class="h5 text-light pb-3">
                     Possuímos um amplo e moderno catálogo de
                     massas e salgados congelados. Sendo a marca
                     mais conhecida e querida entre nossos
                     consumidores. Conheça mais e experimente
                     nossos produtos!
                 </p>
+                <a href="./produtos.php?id=todos">
+                    <button class="btn btn-success mb-md-3">Acesse nossos produtos <i class="bi bi-arrow-right-circle"></i></button>
+                </a>
             </div>
             <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
                 <img src="./assets/img/main.png" width="320" height="320">
@@ -42,7 +45,7 @@
         <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 order-md-first order-last">
             <div class="container-fluid py-3 p-0 p-md-3 order-last">
                 <h2 class="h1 pb-3">Pierogues</h2>
-                <p class="h5">
+                <p class="h5 pb-3">
                     Tradição dos imigrantes poloneses, o pierogue
                     (ou 'pierog') é basicamente um pastel salgado
                     cozido. Com uma massa saborosa recheios
@@ -50,6 +53,9 @@
                     Massas Chasko por ser um dos mais procurados
                     pelos consumidores.
                 </p>
+                <a href="./produtos.php?id=pierogues">
+                    <button class="btn btn-success mb-md-3">Acesse nossos produtos <i class="bi bi-arrow-right-circle"></i></button>
+                </a>
             </div>
             <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
                 <img src="./assets/img/section-a.png" width="320" height="320">
@@ -66,11 +72,30 @@
             </div>
         </div>
     </section>
-    <section id="endereco">
-        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5">
+    <section>
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 order-md-first order-last">
             <div class="container-fluid py-3 p-0 p-md-3">
-                <h2 class="h1 pb-3 pt-md-5">Conheça Nossa Loja!</h2>
+                <h2 class="h1 pb-3">Nhoques</h2>
                 <p class="h5 pb-3">
+                    O nhoque é um prato típico da cozinha italiana. Trata-se
+                    de uma massa cozida dividida em pequenas porções arredondadas,
+                    pode ser servida com o molho de preferência. Experimente mais 
+                    essa delícia da Massas Chasko.
+                </p>
+                <a href="./produtos.php?id=nhoques">
+                    <button class="btn btn-success mb-md-3">Acesse nossos produtos <i class="bi bi-arrow-right-circle"></i></button>
+                </a>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
+                <img src="./assets/img/section-c.png" width="320" height="320">
+            </div>
+        </div>
+    </section>
+    <section id="endereco">
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 bg-dark">
+            <div class="container-fluid py-3 p-0 p-md-3 order-last">
+                <h2 class="h1 text-light pb-3 pt-md-5">Conheça Nossa Loja!</h2>
+                <p class="h5 text-light pb-3">
                     Endereço:<br>
                     Rua Camacuã, 43, Rio Bonito, Irati - PR
                 </p>
@@ -81,6 +106,24 @@
             <div class="container-fluid py-0 p-0 p-md-3 d-flex justify-content-center">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.11538304367!2d-50.66692692645915!3d-25.467822377537715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e87ff69ac3bb7f%3A0x6ce328b1484e5785!2sMassas%20Chasko!5e0!3m2!1spt-BR!2sbr!4v1698878432446!5m2!1spt-BR!2sbr" width="400px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 order-md-first order-last">
+            <div class="container-fluid py-3 p-0 p-md-3">
+                <h2 class="h1 pb-3">Esfihas</h2>
+                <p class="h5 pb-3">
+                    A esfiha é uma pequena torta assada originária da Síria e 
+                    do Líbano, e encontrada em outros países do Oriente Médio.
+                    Conheça nossos produtos e faça seu pedido.
+                </p>
+                <a href="./produtos.php?id=esfihas">
+                    <button class="btn btn-success mb-md-3">Acesse nossos produtos <i class="bi bi-arrow-right-circle"></i></button>
+                </a>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
+                <img src="./assets/img/section-d.png" width="320" height="320">
             </div>
         </div>
     </section>
@@ -99,6 +142,25 @@
             </div>
             <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
                 <img src="./assets/img/section-b.png" width="320" height="320">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 order-md-first order-last">
+            <div class="container-fluid py-3 p-0 p-md-3">
+                <h2 class="h1 pb-3">Croissants</h2>
+                <p class="h5 pb-3">
+                    O croissant, é um tipo de massa folhada em formato de meia-lua.
+                    São consumidos no café da manhã em muitos países europeus e 
+                    servidos como sobremesa em todo o mundo. Conheça nossas
+                    opcões de croissants salgados e doces.
+                </p>
+                <a href="./produtos.php?id=croissants">
+                    <button class="btn btn-success mb-md-3">Acesse nossos produtos <i class="bi bi-arrow-right-circle"></i></button>
+                </a>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
+                <img src="./assets/img/section-e.png" width="320" height="320">
             </div>
         </div>
     </section>
