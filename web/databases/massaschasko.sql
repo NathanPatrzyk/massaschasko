@@ -32,7 +32,7 @@ CREATE TABLE `categoria` (
   `nome` varchar(200) NOT NULL,
   `peso` varchar(50) DEFAULT NULL,
   `pagina_id` varchar(300) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Despejando dados para a tabela `categoria`
@@ -62,7 +62,7 @@ INSERT INTO `categoria` (`id`, `nome`, `peso`, `pagina_id`) VALUES
 CREATE TABLE `pagina` (
   `id` varchar(300) NOT NULL,
   `nome` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Despejando dados para a tabela `pagina`
@@ -88,7 +88,7 @@ CREATE TABLE `produto` (
   `descricao` varchar(500) DEFAULT NULL,
   `mensagem_de_texto` varchar(500) DEFAULT NULL,
   `categoria_id` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Despejando dados para a tabela `produto`
