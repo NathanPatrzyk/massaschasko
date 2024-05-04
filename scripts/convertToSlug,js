@@ -1,0 +1,9 @@
+function convertToSlug(text) {
+  return text.toLowerCase()
+    .replace(/[^\w ]+/g, "")
+    .replace(/ +/g, "-");
+}
+
+let text = "Nome da Pessoa"
+
+console.log(text+" -> "+convertToSlug(text))
