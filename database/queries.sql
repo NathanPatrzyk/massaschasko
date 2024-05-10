@@ -32,7 +32,8 @@ VALUES
     ("350g"),
     ("400g"),
     ("1Kg"),
-    ("1,2Kg");
+    ("1,2Kg"),
+    ("2Kg");
 SELECT * FROM weight;
 
 CREATE TABLE product (
@@ -46,3 +47,20 @@ CREATE TABLE product (
     ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE = INNODB;
 DESC product;
+
+INSERT INTO product
+    (name_product, id_category, id_weight)
+VALUES
+    ("Pierogue de Pizza", 4, 2),
+    ("Pierogue de Batata", 4, 2),
+    ("Pierogue de Frango", 4, 2),
+    ("Pierogue Tradicional", 4, 2),
+    ("Pierogue de Calabresa", 4, 2),
+    ("Pierogue de Espinafre", 4, 2),
+    ("Pierogue de Requeijão", 4, 2),
+    ("Pierogue de Feijão e Bacon", 4, 2),
+    ("Pierogue de Batata e Rúcula", 4, 2),
+    ("Pierogue de Batata e Repolho", 4, 2),
+    ("Pierogue de Batata com Bacon", 4, 2),
+    ("Pierogue de Ricota e Tomate Seco", 4, 2),
+    ("Pierogue de Batata e Carne Desfiada", 4, 2);
