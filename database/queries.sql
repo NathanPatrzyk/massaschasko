@@ -53,14 +53,25 @@ INSERT INTO product
 VALUES
     ("Pierogue de Pizza", 4, 2),
     ("Pierogue de Batata", 4, 2),
-    ("Pierogue de Frango", 4, 2),
+    ("Pierogue de Batata com Frango", 4, 2),
     ("Pierogue Tradicional", 4, 2),
     ("Pierogue de Calabresa", 4, 2),
-    ("Pierogue de Espinafre", 4, 2),
-    ("Pierogue de Requeijão", 4, 2),
+    ("Pierogue de Espinafre Ricota e Brócolis", 4, 2),
+    ("Pierogue de Requeijão e Ricota", 4, 2),
     ("Pierogue de Feijão e Bacon", 4, 2),
     ("Pierogue de Batata e Rúcula", 4, 2),
     ("Pierogue de Batata e Repolho", 4, 2),
     ("Pierogue de Batata com Bacon", 4, 2),
-    ("Pierogue de Ricota e Tomate Seco", 4, 2),
-    ("Pierogue de Batata e Carne Desfiada", 4, 2);
+    ("Pierogue de Ricota com Tomate Seco", 4, 2),
+    ("Pierogue de Batata e Carne Desfiada", 4, 2),
+
+    ("Pierogue de Batata", 4, 5),
+    ("Pierogue de Batata com Frango", 4, 5),
+    ("Pierogue Tradicional", 4, 5),
+    ("Pierogue de Calabresa", 4, 5),
+    ("Pierogue de Requeijão e Ricota", 4, 5),
+    ("Pierogue de Batata com Bacon", 4, 5),
+
+    ("Nhoque Tradicional", 3, 2),
+
+    ("Nhoque Tradicional", 3, 3);
