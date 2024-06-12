@@ -73,5 +73,12 @@ VALUES
     ("Pierogue de Batata com Bacon", 4, 5),
 
     ("Nhoque Tradicional", 3, 2),
+    ("Nhoque Recheado de Frango", 3, 2),
+    ("Nhoque Recheado de Queijo", 3, 2),
+    ("Nhoque Recheado de Carne Moída", 3, 2),
 
-    ("Nhoque Tradicional", 3, 3);
+    ("Nhoque Tradicional", 3, 3),
+    ("Nhoque de Espinafre", 3, 3),
+    ("Nhoque Recheado de Frango", 3, 3),
+    ("Nhoque Recheado de Queijo", 3, 3),
+    ("Nhoque Recheado de Carne Moída", 3, 3);
