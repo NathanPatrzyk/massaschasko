@@ -81,4 +81,17 @@ VALUES
     ("Nhoque de Espinafre", 3, 3),
     ("Nhoque Recheado de Frango", 3, 3),
     ("Nhoque Recheado de Queijo", 3, 3),
-    ("Nhoque Recheado de Carne Moída", 3, 3);
+    ("Nhoque Recheado de Carne Moída", 3, 3),
+    
+    ("Esfiha de Frango", 2, 1),
+    ("Esfiha de Carne Moída", 2, 1),
+    ("Esfiha de Palmito", 2, 1),
+    ("Esfiha de Pizza", 2, 1),
+    ("Esfiha de Multigrãos", 2, 1),
+
+    ("Croissant de Frango", 1, 1),
+    ("Croissant de Carne Moída", 1, 1),
+    ("Croissant de Palmito", 1, 1),
+    ("Croissant de Pizza", 1, 1),
+    ("Croissant de Chocolate Preto", 1, 1),
+    ("Croissant de Banana com Canela", 1, 1);
