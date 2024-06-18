@@ -1,0 +1,5 @@
+{
+  "out": "drizzle/migration",
+  "schema": "src/db/schema.ts",
+  "dialect": "sqlite"
+}

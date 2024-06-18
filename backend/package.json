@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:up": "drizzle-kit up"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.6.2",
+    "drizzle-orm": "^0.31.2",
+    "hono": "^4.4.6"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.22.7",
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "wrangler": "^3.57.2"
+  }
+}
