@@ -1,11 +1,11 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "9dd9fbae-9ba0-4315-bb06-20c34c573922",
+  "id": "e94297df-a079-4cf5-b48a-dfb55e08698b",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "weights": {
-      "name": "weights",
+    "pages": {
+      "name": "pages",
       "columns": {
         "id": {
           "name": "id",

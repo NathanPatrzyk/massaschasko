@@ -1,16 +1,6 @@
-DROP DATABASE IF EXISTS new_massaschasko;
-CREATE DATABASE new_massaschasko;
-USE new_massaschasko;
-
-CREATE TABLE page (
-    id_page INT AUTO_INCREMENT,
-    name_page VARCHAR(200) NOT NULL,
-    CONSTRAINT pk_page PRIMARY KEY (id_page)
-)ENGINE = INNODB;
-DESC page;
-
-INSERT INTO page
-    (name_page)
+-- Active: 1718755439304@@127.0.0.1@3306
+INSERT INTO pages
+    (name)
 VALUES
     ("Croissants"),
     ("Esfihas"),
@@ -18,55 +8,27 @@ VALUES
     ("Pães de Queijo"),
     ("Pierogues"),
     ("Outros Produtos");
-SELECT * FROM page;
 
-CREATE TABLE category (
-    id_category INT AUTO_INCREMENT,
-    name_category VARCHAR(200) NOT NULL,
-    weight_category VARCHAR(200) NOT NULL,
-    id_page INT NOT NULL,
-    CONSTRAINT pk_category PRIMARY KEY (id_category),
-    CONSTRAINT fk_category_page FOREIGN KEY (id_page) REFERENCES page(id_page)
-    ON DELETE CASCADE ON UPDATE CASCADE
-)ENGINE = INNODB;
-DESC category;
-
-INSERT INTO category
-    (name_category, weight_category, id_page)
+INSERT INTO categories
+    (name, weight, page_id)
 VALUES
     ("Croissants", "350g", 1),
     ("Croissants", "1,2Kg", 1),
-
     ("Esfihas", "350g", 2),
     ("Esfihas", "1,2Kg", 2),
     ("Esfihas Abertas", "400g", 2),
-
     ("Nhoques", "400g", 3),
     ("Nhoques", "1Kg", 3),
-
     ("Pães de Queijo", "500g", 4),
-
     ("Pierogues", "400g", 5),
     ("Pierogues", "2Kg", 5),
     ("Mini Pierogues", "1Kg", 5),
-
     ("Outros Produtos", "400g", 6),
     ("Outros Produtos", "1Kg", 6),
     ("Outros Produtos", "1,2Kg", 6);
-SELECT * FROM category;
 
-CREATE TABLE product (
-    id_product INT AUTO_INCREMENT,
-    name_product VARCHAR(200) NOT NULL,
-    id_category INT NOT NULL,
-    CONSTRAINT pk_product PRIMARY KEY (id_product),
-    CONSTRAINT fk_product_category FOREIGN KEY (id_category) REFERENCES category(id_category)
-    ON DELETE CASCADE ON UPDATE CASCADE
-)ENGINE = INNODB;
-DESC product;
-
-INSERT INTO product
-    (name_product, id_category)
+INSERT INTO products
+    (name, category_id)
 VALUES
     ("Croissant de Carne Moída", 1),
     ("Croissant de Frango", 1),
@@ -74,43 +36,35 @@ VALUES
     ("Croissant de Palmito", 1),
     ("Croissant de Banana com Canela", 1),
     ("Croissant de Chocolate Preto", 1),
-
     ("Croissant de Carne Moída", 2),
     ("Croissant de Frango", 2),
     ("Croissant de Pizza", 2),
     ("Croissant de Chocolate Preto", 2),
-
     ("Esfiha de Carne Moída", 3),
     ("Esfiha de Frango", 3),
     ("Esfiha de Pizza", 3),
     ("Esfiha de Palmito", 3),
     ("Esfiha de Costela", 3),
     ("Esfiha de Multigrãos", 3),
-
     ("Esfiha de Carne Moída", 4),
     ("Esfiha de Frango", 4),
-
     ("Esfiha Aberta de Carne Moída", 5),
     ("Esfiha Aberta de Frango", 5),
     ("Esfiha Aberta de Pizza", 5),
     ("Esfiha Aberta de Costela", 5),
     ("Esfiha Aberta de Chocolate Preto", 5),
-
     ("Nhoque Tradicional", 6),
     ("Nhoque Recheado de Carne Moída", 6),
     ("Nhoque Recheado de Frango", 6),
     ("Nhoque Recheado de Queijo", 6),
-    
     ("Nhoque Tradicional", 7),
     ("Nhoque de Espinafre", 7),
     ("Nhoque Recheado de Carne Moída", 7),
     ("Nhoque Recheado de Frango", 7),
     ("Nhoque Recheado de Queijo", 7),
-
     ("Pão de Queijo com Cheddar", 8),
     ("Pão de Queijo com Vinagrete", 8),
     ("Pão de Queijo Tradicional", 8),
-
     ("Pierogue de Batata", 9),
     ("Pierogue de Batata e Bacon", 9),
     ("Pierogue de Batata e Frango", 9),
@@ -124,14 +78,12 @@ VALUES
     ("Pierogue de Requeijão e Ricota", 9),
     ("Pierogue de Ricota com Tomate Seco", 9),
     ("Pierogue Tradicional", 9),
-
     ("Pierogue de Batata", 10),
     ("Pierogue de Batata e Bacon", 10),
     ("Pierogue de Batata e Frango", 10),
     ("Pierogue de Calabresa", 10),
     ("Pierogue de Requeijão e Ricota", 10),
     ("Pierogue Tradicional", 10),
-
     ("Mini Pierogue de Bacon", 11),
     ("Mini Pierogue de Calabresa", 11),
     ("Mini Pierogue de Carne Desfiada", 11),
@@ -139,16 +91,13 @@ VALUES
     ("Mini Pierogue de Frango", 11),
     ("Mini Pierogue de Requeijão", 11),
     ("Mini Pierogue Tradicional", 11),
-
     ("Charuto de Repolho", 12),
     ("Churros de Doce de Leite com Chocolate", 12),
     ("Coxinha de Frango e Catupiry", 12),
     ("Kibe Recheado", 12),
     ("Macarrão Talharim", 12),
-
     ("Churros de Doce de Leite com Chocolate", 13),
     ("Coxinha de Frango e Catupiry", 13),
     ("Kibe Recheado", 13),
-
     ("Hamburgão", 14),
     ("Hot Dog", 14);
