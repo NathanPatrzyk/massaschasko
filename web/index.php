@@ -164,6 +164,35 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 order-md-first order-last  bg-dark">
+            <div class="container-fluid py-3 p-0 p-md-3 order-last">
+                <h2 class="h1 text-light pb-3">Pães de Queijo</h2>
+                <p class="h5 text-light pb-3">
+                    O pão de queijo é originário de Minas Gerais e surgiu por volta de 1750, usando polvilho de mandioca, queijo, ovos e leite. Conheça nossos produtos e faça seu pedido para experimentar essa delícia.
+                </p>
+                <a href="./produtos.php?id=paes-de-queijo">
+                    <button class="btn btn-success mb-md-3">Acesse nossos produtos <i class="bi bi-arrow-right-circle"></i></button>
+                </a>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
+                <img src="./assets/img/section-f.png" width="320" height="320">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid d-block d-md-flex gap-3 align-items-center p-4 p-md-5 order-md-first order-last">
+            <div class="container-fluid py-3 p-0 p-md-3">
+                <h2 class="h1 pb-3">Outros Produtos</h2>
+                <a href="./produtos.php?id=outros">
+                    <button class="btn btn-success mb-md-3">Acesse nossos produtos <i class="bi bi-arrow-right-circle"></i></button>
+                </a>
+            </div>
+            <div class="container-fluid py-3 p-0 p-md-3 d-flex justify-content-center">
+                <img src="./assets/img/section-g.png" width="320" height="320">
+            </div>
+        </div>
+    </section>
     <?php
         include './pages/footer.pages.php';
     ?>
