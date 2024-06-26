@@ -4,6 +4,7 @@ import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
 export const pages = sqliteTable("pages", {
   id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
   name: text("name", { length: 200 }).notNull(),
+  description: text("description", { length: 2000 }),
 });
 
 export const categories = sqliteTable("categories", {

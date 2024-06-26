@@ -1,13 +1,12 @@
--- Active: 1718755439304@@127.0.0.1@3306
 INSERT INTO pages
-    (name)
+    (name, description)
 VALUES
-    ("Croissants"),
-    ("Esfihas"),
-    ("Nhoques"),
-    ("Pães de Queijo"),
-    ("Pierogues"),
-    ("Outros Produtos");
+    ("Croissants", "O croissant, é um tipo de massa folhada em formato de meia-lua. São consumidos no café da manhã em muitos países europeus e servidos como sobremesa em todo o mundo. Conheça nossas opcões de croissants salgados e doces."),
+    ("Esfihas", "A esfiha é uma pequena torta assada originária da Síria e do Líbano, e encontrada em outros países do Oriente Médio. Conheça nossos produtos e faça seu pedido."),
+    ("Nhoques", "O nhoque é um prato típico da cozinha italiana. Trata-se de uma massa cozida dividida em pequenas porções arredondadas, pode ser servida com o molho de preferência. Experimente mais essa delícia da Massas Chasko."),
+    ("Pães de Queijo", "O pão de queijo é originário de Minas Gerais e surgiu por volta de 1750, usando polvilho de mandioca, queijo, ovos e leite. Conheça nossos produtos e faça seu pedido para experimentar essa delícia."),
+    ("Pierogues", "Tradição dos imigrantes poloneses, o pierogue (ou 'pierog') é basicamente um pastel salgado cozido. Com uma massa saborosa recheios únicos, o produto tornou-se carro chefe da Massas Chasko por ser um dos mais procurados pelos consumidores."),
+    ("Outros Produtos", "Também possuímos Charuto, Churros, Coxinha, Kibe, Macarrão, Hamburgão e Hot Dog. Conheça nossos produtos e faça seu pedido.");
 
 INSERT INTO categories
     (name, weight, page_id)

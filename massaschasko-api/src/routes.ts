@@ -17,6 +17,7 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
       .select({
         id: pages.id,
         name: pages.name,
+        description: pages.description,
       })
       .from(pages)
       .all();
@@ -39,7 +40,6 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
         id: categories.id,
         name: categories.name,
         weight: categories.weight,
-        pageId: categories.pageId,
       })
       .from(categories)
       .all();
@@ -57,7 +57,6 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
         id: categories.id,
         name: categories.name,
         weight: categories.weight,
-        pageId: categories.pageId,
       })
       .from(categories)
       .where(eq(categories.pageId, pageId));

@@ -15,6 +15,13 @@
       "when": 1718754773602,
       "tag": "0001_brief_stark_industries",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1719359684959,
+      "tag": "0002_lucky_lightspeed",
+      "breakpoints": true
     }
   ]
 }
