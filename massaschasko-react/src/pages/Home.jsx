@@ -1,9 +1,9 @@
 import React from "react";
-import PageContainer from "../components/PageContainer";
+import Container from "../components/Container";
 
 const Home = () => {
   return (
-    <PageContainer className="bg-neutral-950">
+    <Container className="bg-neutral-950 py-8 md:py-16 pt-24 md:pt-32">
       <p className="text-green-50 pb-2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum
         porro praesentium, ipsam quidem, alias ea earum ducimus libero inventore
@@ -179,7 +179,7 @@ const Home = () => {
         repellat. Amet veritatis magni maiores vero labore. Beatae aliquam
         temporibus impedit magnam omnis ipsa aut!
       </p>
-    </PageContainer>
+    </Container>
   );
 };
 
