@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
-
 import Container from "./Container";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Nav = () => {
   const [opacity, setOpacity] = useState(100);
@@ -9,19 +8,21 @@ const Nav = () => {
   const changeOpacity = () => {
     if (window.scrollY >= 64) {
       setOpacity(80);
-    }
-    else if (window.scrollY >= 32) {
-      setOpacity(90);
     } else {
       setOpacity(100);
     }
   };
 
-  window.addEventListener("scroll", changeOpacity);
+  useEffect(() => {
+    window.addEventListener("scroll", changeOpacity);
+    return () => {
+      window.removeEventListener("scroll", changeOpacity);
+    };
+  }, []);
 
   return (
     <Container
-      className={`bg-green-600 bg-opacity-${opacity} transition ease-in-out duration-500 font-bold fixed top-0 left-0 flex items-center justify-between py-3 w-screen`}
+      className={`bg-green-600 transition ease-in-out duration-300 font-bold fixed top-0 left-0 flex items-center justify-between py-3 w-screen bg-opacity-${opacity}`}
     >
       <figure>
         <NavLink className="hover:opacity-90" to="/">
