@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home";
+import { Home } from "./pages/home";
 
-import Nav from "./components/Nav";
+import { Nav } from "./components/nav";
 
-function App() {
+export function App() {
   return (
     <>
       <BrowserRouter>
@@ -16,5 +16,3 @@ function App() {
     </>
   );
 }
-
-export default App;
