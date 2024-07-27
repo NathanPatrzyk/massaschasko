@@ -3,13 +3,13 @@ import Container from "./Container";
 import { useState, useEffect } from "react";
 
 const Nav = () => {
-  const [opacity, setOpacity] = useState(100);
+  const [opacity, setOpacity] = useState(1);
 
   const changeOpacity = () => {
     if (window.scrollY >= 64) {
-      setOpacity(80);
+      setOpacity(0.8);
     } else {
-      setOpacity(100);
+      setOpacity(1);
     }
   };
 
@@ -22,7 +22,8 @@ const Nav = () => {
 
   return (
     <Container
-      className={`bg-green-600 transition ease-in-out duration-300 font-bold fixed top-0 left-0 flex items-center justify-between py-3 w-screen bg-opacity-${opacity}`}
+      className="bg-green-600 transition ease-in-out duration-300 font-bold fixed top-0 left-0 flex items-center justify-between py-3 w-screen"
+      style={{ opacity }}
     >
       <figure>
         <NavLink className="hover:opacity-90" to="/">
