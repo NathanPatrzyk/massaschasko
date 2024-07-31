@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "../../components/container";
 import { Motion } from "../../components/motion";
 

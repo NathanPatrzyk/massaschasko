@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { X, Menu, ChevronDown } from "lucide-react";
+import { X, Menu, ChevronDown, ChevronUp } from "lucide-react";
 
 import { Container } from "./container";
 import { Motion } from "./motion";
 
 import { useState, useEffect } from "react";
 
-export function Nav() {
+export function Nav({ pages }) {
   const [opacity, setOpacity] = useState(100);
   const [menu, setMenu] = useState(false);
   const [links, setLinks] = useState(false);
@@ -80,13 +80,24 @@ export function Nav() {
           >
             Sobre
           </NavLink>
-          <NavLink
-            className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
-            onClick={openLinks}
-          >
-            Produtos
-            <ChevronDown className="inline" />
-          </NavLink>
+
+          {links ? (
+            <NavLink
+              className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+              onClick={closeLinks}
+            >
+              Produtos
+              <ChevronUp className="inline" />
+            </NavLink>
+          ) : (
+            <NavLink
+              className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+              onClick={openLinks}
+            >
+              Produtos
+              <ChevronDown className="inline" />
+            </NavLink>
+          )}
         </Motion>
         <Motion className="flex items-center gap-2 sm:hidden">
           {menu ? (
@@ -134,14 +145,16 @@ export function Nav() {
 
       {links && (
         <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 font-bold fixed top-16 left-0 flex items-center justify-between py-3 w-screen z-10 flex-wrap">
-          <Motion>
-            <NavLink
-              className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
-              to="/"
-            >
-              Teste
-            </NavLink>
-          </Motion>
+          {pages.map((page) => (
+            <Motion>
+              <NavLink
+                className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
+                to={"/" + page.slug}
+              >
+                page.name
+              </NavLink>
+            </Motion>
+          ))}
         </Container>
       )}
     </>
