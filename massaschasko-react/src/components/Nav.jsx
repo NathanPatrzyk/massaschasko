@@ -151,7 +151,7 @@ export function Nav({ pages }) {
                 className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
                 to={"/" + page.slug}
               >
-                page.name
+                {page.name}
               </NavLink>
             </Motion>
           ))}

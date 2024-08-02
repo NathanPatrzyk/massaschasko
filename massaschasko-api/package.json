@@ -8,12 +8,13 @@
   },
   "dependencies": {
     "@libsql/client": "^0.6.2",
+    "cors": "^2.8.5",
     "drizzle-orm": "^0.31.2",
     "hono": "^4.4.6"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.22.7",
     "@cloudflare/workers-types": "^4.20240529.0",
+    "drizzle-kit": "^0.22.7",
     "wrangler": "^3.57.2"
   }
 }
