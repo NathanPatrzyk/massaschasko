@@ -144,17 +144,25 @@ export function Nav({ pages }) {
       )}
 
       {links && (
-        <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 font-bold fixed top-16 left-0 flex items-center justify-between py-3 w-screen z-10 flex-wrap">
+        <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 fixed top-16 left-0 flex items-center justify-between py-3 w-screen z-10 flex-wrap">
           {pages.map((page) => (
-            <Motion>
+            <Motion className="min-w-full sm:min-w-96">
               <NavLink
                 className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
-                to={"/" + page.slug}
+                to={"/produtos/" + page.slug}
               >
                 {page.name}
               </NavLink>
             </Motion>
           ))}
+          <Motion className="min-w-full sm:min-w-96">
+            <NavLink
+              className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80 justify-self-start grow"
+              to={"/produtos"}
+            >
+              Todos os Produtos
+            </NavLink>
+          </Motion>
         </Container>
       )}
     </>
