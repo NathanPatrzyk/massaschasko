@@ -2,9 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Home } from "./pages/home";
 import { About } from "./pages/about";
+import { Products } from "./pages/products";
 
 import { Nav } from "./components/nav";
-import { Products } from "./pages/products";
+import { Footer } from "./components/footer";
 
 import { useFetch } from "./hooks/useFetch";
 
@@ -21,8 +22,9 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/sobre" element={<About />}></Route>
-          <Route path="/produtos/:id" element={<Products />}></Route>
+          <Route path="/produtos/:id?" element={<Products />}></Route>
         </Routes>
+        <Footer pages={pages} />
       </BrowserRouter>
     </>
   );

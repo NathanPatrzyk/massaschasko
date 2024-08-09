@@ -12,15 +12,6 @@ export function Nav({ pages }) {
   const [links, setLinks] = useState(false);
   const [linksMobile, setLinksMobile] = useState(false);
 
-  const openMenu = () => {
-    setMenu(true);
-  };
-
-  const closeMenu = () => {
-    setMenu(false);
-    setLinksMobile(false);
-  };
-
   const openLinks = () => {
     setLinks(true);
   };
@@ -35,6 +26,21 @@ export function Nav({ pages }) {
 
   const closeLinksMobile = () => {
     setLinksMobile(false);
+  };
+
+  const openMenu = () => {
+    setMenu(true);
+  };
+
+  const closeMenu = () => {
+    setMenu(false);
+    closeLinksMobile();
+  };
+
+  const closeAll = () => {
+    closeMenu();
+    closeLinks();
+    closeLinksMobile();
   };
 
   const opacityClasses = {
@@ -66,7 +72,7 @@ export function Nav({ pages }) {
       >
         <Motion>
           <NavLink className="hover:opacity-90" to="/">
-            <img className="h-10" src="/logo.webp" alt="Massas Chasko" />
+            <img className="h-10" src="/logo.svg" alt="Massas Chasko" />
           </NavLink>
         </Motion>
         <Motion className="hidden items-center gap-2 sm:flex">
@@ -93,19 +99,19 @@ export function Nav({ pages }) {
 
           {links ? (
             <NavLink
-              className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+              className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
               onClick={closeLinks}
             >
               Produtos
-              <ChevronUp className="inline" />
+              <ChevronUp />
             </NavLink>
           ) : (
             <NavLink
-              className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+              className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
               onClick={openLinks}
             >
               Produtos
-              <ChevronDown className="inline" />
+              <ChevronDown />
             </NavLink>
           )}
         </Motion>
@@ -126,11 +132,12 @@ export function Nav({ pages }) {
 
       {menu &&
         (linksMobile ? (
-          <Container className="bg-green-600 bg-opacity-100 transition ease-in-out duration-300 font-bold fixed top-16 left-0 flex items-center justify-between py-3 w-screen z-10 flex-wrap">
+          <Container className="bg-green-600 bg-opacity-100 transition ease-in-out duration-300 font-bold fixed top-16 left-0 flex items-center justify-around py-3 w-screen z-10">
             <Motion>
               <NavLink
                 className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
                 to="/"
+                onClick={closeAll}
               >
                 Início
               </NavLink>
@@ -139,6 +146,7 @@ export function Nav({ pages }) {
               <NavLink
                 className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
                 to="/sobre"
+                onClick={closeAll}
               >
                 Sobre
               </NavLink>
@@ -146,29 +154,30 @@ export function Nav({ pages }) {
             <Motion>
               {linksMobile ? (
                 <NavLink
-                  className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
                   onClick={closeLinksMobile}
                 >
                   Produtos
-                  <ChevronUp className="inline" />
+                  <ChevronUp />
                 </NavLink>
               ) : (
                 <NavLink
-                  className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
                   onClick={openLinksMobile}
                 >
                   Produtos
-                  <ChevronDown className="inline" />
+                  <ChevronDown />
                 </NavLink>
               )}
             </Motion>
           </Container>
         ) : (
-          <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 font-bold fixed top-16 left-0 flex items-center justify-between py-3 w-screen z-10 flex-wrap">
+          <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 font-bold fixed top-16 left-0 flex items-center justify-around py-3 w-screen z-10">
             <Motion>
               <NavLink
                 className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
                 to="/"
+                onClick={closeAll}
               >
                 Início
               </NavLink>
@@ -177,6 +186,7 @@ export function Nav({ pages }) {
               <NavLink
                 className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
                 to="/sobre"
+                onClick={closeAll}
               >
                 Sobre
               </NavLink>
@@ -184,19 +194,19 @@ export function Nav({ pages }) {
             <Motion>
               {linksMobile ? (
                 <NavLink
-                  className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
                   onClick={closeLinksMobile}
                 >
                   Produtos
-                  <ChevronUp className="inline" />
+                  <ChevronUp />
                 </NavLink>
               ) : (
                 <NavLink
-                  className="text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
                   onClick={openLinksMobile}
                 >
                   Produtos
-                  <ChevronDown className="inline" />
+                  <ChevronDown />
                 </NavLink>
               )}
             </Motion>
@@ -204,21 +214,36 @@ export function Nav({ pages }) {
         ))}
 
       {links && (
-        <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 fixed top-16 left-0 py-3 w-screen z-10 grid grid-rows-3 grid-flow-col-dense gap-4 justify-between">
-          {pages.map((page) => (
-            <Motion>
-              <NavLink
-                className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
-                to={`/produtos/${page.slug}`}
-              >
-                {page.name}
-              </NavLink>
-            </Motion>
-          ))}
+        <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 fixed top-16 left-0 py-3 w-screen z-10 grid grid-rows-3 grid-flow-col-dense gap-4 justify-around">
+          {pages &&
+            pages.map((page) =>
+              page.slug !== "nhoques" ? (
+                <Motion>
+                  <NavLink
+                    className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
+                    to={`/produtos/${page.slug}`}
+                    onClick={closeAll}
+                  >
+                    {page.name}
+                  </NavLink>
+                </Motion>
+              ) : (
+                <Motion className="col-span-2">
+                  <NavLink
+                    className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
+                    to={`/produtos/${page.slug}`}
+                    onClick={closeAll}
+                  >
+                    {page.name}
+                  </NavLink>
+                </Motion>
+              )
+            )}
           <Motion>
             <NavLink
               className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
               to="/produtos"
+              onClick={closeAll}
             >
               Todos os Produtos
             </NavLink>
@@ -227,12 +252,13 @@ export function Nav({ pages }) {
       )}
 
       {menu && linksMobile && (
-        <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 fixed top-[113.46px] left-0 py-3 w-screen z-10 grid grid-rows-3 grid-flow-col-dense gap-4 justify-between">
+        <Container className="bg-green-600 bg-opacity-90 hover:bg-opacity-100 transition ease-in-out duration-300 fixed top-[113.46px] left-0 py-3 w-screen z-10 grid grid-rows-4 grid-flow-col-dense gap-4 justify-around">
           {pages.map((page) => (
             <Motion>
               <NavLink
                 className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
                 to={`/produtos/${page.slug}`}
+                onClick={closeAll}
               >
                 {page.name}
               </NavLink>
@@ -242,6 +268,7 @@ export function Nav({ pages }) {
             <NavLink
               className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
               to="/produtos"
+              onClick={closeAll}
             >
               Todos os Produtos
             </NavLink>

@@ -3,9 +3,9 @@ import { Motion } from "../../components/motion";
 
 export function About() {
   return (
-    <Container className="bg-neutral-950 py-8 md:py-16 pt-24 md:pt-32">
+    <Container className="bg-white py-8 md:py-16 pt-24 md:pt-32">
       <Motion>
-        <p className="text-green-50 pb-2">
+        <p className="text-green-950 pb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum
           porro praesentium, ipsam quidem, alias ea earum ducimus libero
           inventore quis fuga harum maiores velit iure, nesciunt quam eos
@@ -43,7 +43,7 @@ export function About() {
         </p>
       </Motion>
       <Motion>
-        <p className="text-green-50 pb-2">
+        <p className="text-green-950 pb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum
           porro praesentium, ipsam quidem, alias ea earum ducimus libero
           inventore quis fuga harum maiores velit iure, nesciunt quam eos
@@ -81,7 +81,7 @@ export function About() {
         </p>
       </Motion>
       <Motion>
-        <p className="text-green-50 pb-2">
+        <p className="text-green-950 pb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum
           porro praesentium, ipsam quidem, alias ea earum ducimus libero
           inventore quis fuga harum maiores velit iure, nesciunt quam eos
@@ -119,7 +119,7 @@ export function About() {
         </p>
       </Motion>
       <Motion>
-        <p className="text-green-50 pb-2">
+        <p className="text-green-950 pb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum
           porro praesentium, ipsam quidem, alias ea earum ducimus libero
           inventore quis fuga harum maiores velit iure, nesciunt quam eos
@@ -157,7 +157,7 @@ export function About() {
         </p>
       </Motion>
       <Motion>
-        <p className="text-green-50 pb-2">
+        <p className="text-green-950 pb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum
           porro praesentium, ipsam quidem, alias ea earum ducimus libero
           inventore quis fuga harum maiores velit iure, nesciunt quam eos
