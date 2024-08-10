@@ -54,13 +54,19 @@ export function Footer({ pages }) {
               42 99813-8118
             </Button>
             <div className="flex justify-between gap-6">
-              <Button externalLink="mailto:massas.chasko@yahoo.com.br">
+              <Button externalLink="mailto:massas.chasko@yahoo.com.br" small>
                 <Mail className="size-5" />
               </Button>
-              <Button externalLink="https://www.instagram.com/massas_chasko/">
+              <Button
+                externalLink="https://www.instagram.com/massas_chasko/"
+                small
+              >
                 <Instagram className="size-5" />
               </Button>
-              <Button externalLink="https://www.facebook.com/massaschasko">
+              <Button
+                externalLink="https://www.facebook.com/massaschasko"
+                small
+              >
                 <Facebook className="size-5" />
               </Button>
             </div>
