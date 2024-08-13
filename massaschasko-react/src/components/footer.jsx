@@ -50,7 +50,7 @@ export function Footer({ pages }) {
               className="w-full"
               externalLink="https://api.whatsapp.com/send/?phone=5542998138118&text&type=phone_number&app_absent=0"
             >
-              <img className="size-5" src="/WhatsApp.svg" alt="WhatsApp" />
+              <img className="size-5" src="/whatsapp.svg" alt="WhatsApp" />
               42 99813-8118
             </Button>
             <div className="flex justify-between gap-6">

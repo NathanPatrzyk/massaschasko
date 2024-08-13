@@ -16,6 +16,9 @@ export default {
         ],
       },
     },
+    backgroundImage: {
+      home: "url('/home.webp')",
+    },
   },
   plugins: [],
 };

@@ -6,10 +6,10 @@ import { Motion } from "../../components/motion";
 
 export function Home() {
   return (
-    <div className="bg-green-600">
-      <Container className="bg-black/70 flex items-center justify-center gap-8 py-8 md:py-16 pt-24 md:pt-32">
-        <Motion className="flex flex-col gap-4">
-          <h1 className="text-white text-4xl">Massas Chasko</h1>
+    <div className="bg-home bg-cover bg-bottom bg-fixed">
+      <Container className="bg-black/70 backdrop-blur-sm flex flex-col md:flex-row items-center justify-center gap-8 py-8 md:py-16 pt-24 md:pt-32 min-h-[70vh]">
+        <Motion className="flex flex-col gap-4  order-last md:order-first">
+          <h1 className="text-white text-3xl sm:text-4xl">Massas Chasko</h1>
           <h2 className="text-green-600 text-2xl font-bold uppercase">
             Somos uma empresa de massas feitas 100% caseiras.
           </h2>
@@ -24,8 +24,8 @@ export function Home() {
             </Button>
           </div>
         </Motion>
-        <Motion >
-          <img className="w-80" src="/logo.svg" />
+        <Motion className="shrink-0 w-64 h-[155px]">
+          <img className="size-full" src="/logo.svg" />
         </Motion>
       </Container>
     </div>
