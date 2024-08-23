@@ -20,7 +20,7 @@ export function App() {
       <BrowserRouter>
         <Nav pages={pages} />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home pages={pages} />}></Route>
           <Route path="/sobre" element={<About />}></Route>
           <Route path="/produtos/:id?" element={<Products />}></Route>
         </Routes>

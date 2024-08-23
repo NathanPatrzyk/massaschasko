@@ -21,11 +21,11 @@ export function Main() {
           Conheça mais e experimente nossos produtos!
         </Text>
         <Button>
-          Conheça Nossos Produtos <ChevronRight className="size-5" />
+          Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
         </Button>
       </Motion>
       <Motion className="shrink-0 w-96 max-w-full">
-        <img className="px-16 size-full" src="/logo.svg" />
+        <img className="px-8 md:px-16 size-full" src="/logo.svg" />
       </Motion>
     </Container>
   );
