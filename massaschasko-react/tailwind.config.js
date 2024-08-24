@@ -18,6 +18,7 @@ export default {
     },
     backgroundImage: {
       home: "url('/home.webp')",
+
       post1: "url('/post1.webp')",
       post2: "url('/post2.webp')",
       post3: "url('/post3.webp')",
@@ -27,6 +28,9 @@ export default {
       post7: "url('/post7.webp')",
       post8: "url('/post8.webp')",
       post9: "url('/post9.webp')",
+
+      pierogues: "url('/pierogues.webp')",
+      nhoques: "url('/nhoques.webp')",
     },
   },
   plugins: [],

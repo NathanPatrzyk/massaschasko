@@ -10,11 +10,23 @@ export function Home({ pages }) {
       <Main />
 
       {pages &&
-        pages.map((page) => page.id == 5 && <LinkToProduct page={page} />)}
+        pages.map(
+          (page) => page.id == 5 && <LinkToProduct imageLeft page={page} />
+        )}
 
       <Contact />
 
+      {pages &&
+        pages.map(
+          (page) => page.id == 3 && <LinkToProduct imageRight page={page} />
+        )}
+
       <Location />
+
+      {pages &&
+        pages.map(
+          (page) => page.id == 2 && <LinkToProduct imageRight page={page} />
+        )}
 
       <SocialMedia />
     </div>
