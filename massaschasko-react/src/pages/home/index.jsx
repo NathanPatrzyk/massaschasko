@@ -11,21 +11,21 @@ export function Home({ pages }) {
 
       {pages &&
         pages.map(
-          (page) => page.id == 5 && <LinkToProduct imageLeft page={page} />
+          (page) => page.id == 1 && <LinkToProduct imageLeft page={page} />
         )}
 
       <Contact />
 
       {pages &&
         pages.map(
-          (page) => page.id == 3 && <LinkToProduct imageRight page={page} />
+          (page) => page.id == 2 && <LinkToProduct imageRight page={page} />
         )}
 
       <Location />
 
       {pages &&
         pages.map(
-          (page) => page.id == 2 && <LinkToProduct imageRight page={page} />
+          (page) => page.id == 3 && <LinkToProduct imageRight page={page} />
         )}
 
       <SocialMedia />

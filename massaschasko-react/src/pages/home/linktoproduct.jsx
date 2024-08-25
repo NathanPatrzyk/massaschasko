@@ -14,49 +14,51 @@ export function LinkToProduct({ page, imageLeft, imageRight }) {
 
   if (imageLeft) {
     return (
-      <div
-        className="bg-white flex flex-col-reverse md:flex-row items-center 
-     justify-center"
-      >
-        <div
-          className={`shrink-0 ${
-            backgroundImageClasses[page.slug]
-          } bg-cover bg-no-repeat bg-left-top h-96 md:w-96 w-full`}
-        ></div>
-        <Container className="pb-0 md:pb-16 pt-8 md:pt-16">
-          <Motion className="flex flex-col gap-4">
-            <Subtitle color="green">{page.name}</Subtitle>
-            <Text color="slate-900">{page.description}</Text>
-            <Button>
-              Conheça Nossos Produtos{" "}
-              <ChevronRight className="shrink-0 size-5" />
-            </Button>
-          </Motion>
-        </Container>
-      </div>
+      <Container className="bg-white flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:pb-16 p-8 md:p-16">
+        <Motion className="md:shrink-0 grid grid-cols-3 grid-rows-3 gap-4 w-96 max-w-[78vw]">
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+        </Motion>
+
+        <Motion className="flex flex-col gap-4">
+          <Subtitle color="green">{page.name}</Subtitle>
+          <Text color="slate-900">{page.description}</Text>
+          <Button>
+            Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
+          </Button>
+        </Motion>
+      </Container>
     );
   } else if (imageRight) {
     return (
-      <div
-        className="bg-white flex flex-col md:flex-row items-center 
-     justify-center"
-      >
-        <Container className="pb-0 md:pb-16 pt-8 md:pt-16">
-          <Motion className="flex flex-col gap-4">
-            <Subtitle color="green">{page.name}</Subtitle>
-            <Text color="slate-900">{page.description}</Text>
-            <Button>
-              Conheça Nossos Produtos{" "}
-              <ChevronRight className="shrink-0 size-5" />
-            </Button>
-          </Motion>
-        </Container>
-        <div
-          className={`shrink-0 ${
-            backgroundImageClasses[page.slug]
-          } bg-cover bg-no-repeat bg-right-top h-96 md:w-96 w-full`}
-        ></div>
-      </div>
+      <Container className="bg-white flex flex-col md:flex-row items-center justify-center gap-8 md:pb-16 p-8 md:p-16">
+        <Motion className="flex flex-col gap-4">
+          <Subtitle color="green">{page.name}</Subtitle>
+          <Text color="slate-900">{page.description}</Text>
+          <Button>
+            Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
+          </Button>
+        </Motion>
+
+        <Motion className="md:shrink-0 grid grid-cols-3 grid-rows-3 gap-4 w-96 max-w-[78vw]">
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+          <div className="bg-green-500 aspect-[13/18] rounded-md"></div>
+        </Motion>
+      </Container>
     );
   }
 }

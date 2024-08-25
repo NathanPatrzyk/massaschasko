@@ -228,7 +228,7 @@ export function Nav({ pages }) {
                   </NavLink>
                 </Motion>
               ) : (
-                <Motion className="col-span-2">
+                <Motion className="row-span-2">
                   <NavLink
                     className="text-white transition ease-in-out duration-300 p-1 hover:opacity-80"
                     to={`/produtos/${page.slug}`}
