@@ -11,24 +11,57 @@ export function Home({ pages }) {
 
       {pages &&
         pages.map(
-          (page) => page.id == 1 && <LinkToProduct imageLeft page={page} />
+          (page) =>
+            page.slug == "pierogues" && (
+              <LinkToProduct imageLeft light page={page} />
+            )
         )}
 
       <Contact />
 
       {pages &&
         pages.map(
-          (page) => page.id == 2 && <LinkToProduct imageRight page={page} />
+          (page) =>
+            page.slug == "nhoques" && (
+              <LinkToProduct imageRight light page={page} />
+            )
         )}
 
       <Location />
 
       {pages &&
         pages.map(
-          (page) => page.id == 3 && <LinkToProduct imageRight page={page} />
+          (page) =>
+            page.slug == "croissants" && (
+              <LinkToProduct imageRight light page={page} />
+            )
         )}
 
       <SocialMedia />
+
+      {pages &&
+        pages.map(
+          (page) =>
+            page.slug == "esfihas" && (
+              <LinkToProduct imageRight light page={page} />
+            )
+        )}
+
+      {pages &&
+        pages.map(
+          (page) =>
+            page.slug == "paes-de-queijo" && (
+              <LinkToProduct imageLeft dark page={page} />
+            )
+        )}
+
+      {pages &&
+        pages.map(
+          (page) =>
+            page.slug == "outros-produtos" && (
+              <LinkToProduct imageRight light page={page} />
+            )
+        )}
     </div>
   );
 }

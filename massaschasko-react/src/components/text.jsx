@@ -1,3 +1,7 @@
 export function Text({ children, color }) {
-  return <p className={`text-${color}`}>{children}</p>;
+  const colorClasses = {
+    white: "text-white",
+    black: "text-zinc-900",
+  };
+  return <p className={`${colorClasses[color]}`}>{children}</p>;
 }
