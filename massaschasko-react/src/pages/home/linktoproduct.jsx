@@ -41,7 +41,7 @@ export function LinkToProduct({ page, imageLeft, imageRight, light, dark }) {
         <Motion className="flex flex-col gap-4">
           <Subtitle color="green">{page.name}</Subtitle>
           <Text color="black">{page.description}</Text>
-          <Button>
+          <Button link={`/produtos/${page.slug}`}>
             Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
           </Button>
         </Motion>
@@ -69,7 +69,7 @@ export function LinkToProduct({ page, imageLeft, imageRight, light, dark }) {
         <Motion className="flex flex-col gap-4">
           <Subtitle color="green">{page.name}</Subtitle>
           <Text color="white">{page.description}</Text>
-          <Button>
+          <Button link={`/produtos/${page.slug}`}>
             Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
           </Button>
         </Motion>

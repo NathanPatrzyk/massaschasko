@@ -20,7 +20,7 @@ export function Main() {
           Somos a marca mais conhecida e querida entre nossos consumidores.
           Conheça mais e experimente nossos produtos!
         </Text>
-        <Button link="/produtos/1">
+        <Button link="/produtos/pierogues">
           Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
         </Button>
       </Motion>

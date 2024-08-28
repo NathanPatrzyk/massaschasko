@@ -22,7 +22,10 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home pages={pages} />}></Route>
           <Route path="/sobre" element={<About />}></Route>
-          <Route path="/produtos/:id" element={<Products />}></Route>
+          <Route
+            path="/produtos/:slug"
+            element={<Products pages={pages} />}
+          ></Route>
         </Routes>
         <Footer pages={pages} />
       </BrowserRouter>

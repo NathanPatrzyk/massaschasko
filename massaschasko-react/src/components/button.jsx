@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Button({
   className,
@@ -8,6 +9,12 @@ export function Button({
   small,
   bgColor,
 }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   if (externalLink) {
     if (small) {
       return (
