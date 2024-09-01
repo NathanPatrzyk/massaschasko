@@ -26,7 +26,7 @@ export function LinkToProduct({ page, imageLeft, imageRight, light, dark }) {
           flexRow && flexRowClasses[flexRow]
         } items-center justify-center gap-8 md:pb-16 p-8 md:p-16`}
       >
-        <Motion className="md:shrink-0 grid grid-cols-3 grid-rows-3 gap-2 h-96 max-w-[78vw]">
+        <Motion className="md:shrink-0 grid grid-cols-3 grid-rows-3 gap-2 h-[100vw] max-h-96 max-w-[78vw]">
           <div className="bg-green-500 aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"></div>
           <div className="bg-green-500 aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"></div>
           <div className="bg-green-500 aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"></div>
