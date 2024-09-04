@@ -8,6 +8,7 @@ export function Button({
   link,
   small,
   bgColor,
+  isProductLink,
 }) {
   const location = useLocation();
 
@@ -38,15 +39,27 @@ export function Button({
           </a>
         );
       } else if (bgColor == "black") {
-        return (
-          <a href={externalLink} target="_blank">
-            <button
-              className={`bg-green-600 text-white font-bold rounded-md transition ease-in-out duration-300 flex justify-center items-center gap-1 mx-auto sm:mx-0 py-2 px-4 w-full sm:w-auto max-w-72 hover:opacity-80 ${className}`}
-            >
-              {children}
-            </button>
-          </a>
-        );
+        if (isProductLink) {
+          return (
+            <a className="w-full" href={externalLink} target="_blank">
+              <button
+                className={`bg-green-600 text-white font-bold rounded-md transition ease-in-out duration-300 flex justify-center items-center gap-2 py-2 px-4 w-full hover:opacity-80 ${className}`}
+              >
+                {children}
+              </button>
+            </a>
+          );
+        } else if (!isProductLink) {
+          return (
+            <a href={externalLink} target="_blank">
+              <button
+                className={`bg-green-600 text-white font-bold rounded-md transition ease-in-out duration-300 flex justify-center items-center gap-1 mx-auto sm:mx-0 py-2 px-4 w-full sm:w-auto max-w-72 hover:opacity-80 ${className}`}
+              >
+                {children}
+              </button>
+            </a>
+          );
+        }
       }
     }
   } else {

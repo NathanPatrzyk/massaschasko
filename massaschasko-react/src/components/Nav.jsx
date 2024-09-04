@@ -98,21 +98,21 @@ export function Nav({ pages }) {
           </NavLink>
 
           {links ? (
-            <NavLink
-              className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+            <div
+              className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80 cursor-pointer"
               onClick={closeLinks}
             >
               Produtos
               <ChevronUp />
-            </NavLink>
+            </div>
           ) : (
-            <NavLink
-              className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+            <div
+              className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80 cursor-pointer"
               onClick={openLinks}
             >
               Produtos
               <ChevronDown />
-            </NavLink>
+            </div>
           )}
         </Motion>
         <Motion className="flex items-center gap-2 sm:hidden">
@@ -153,21 +153,21 @@ export function Nav({ pages }) {
             </Motion>
             <Motion>
               {linksMobile ? (
-                <NavLink
-                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                <div
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80 cursor-pointer"
                   onClick={closeLinksMobile}
                 >
                   Produtos
                   <ChevronUp />
-                </NavLink>
+                </div>
               ) : (
-                <NavLink
-                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                <div
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80 cursor-pointer"
                   onClick={openLinksMobile}
                 >
                   Produtos
                   <ChevronDown />
-                </NavLink>
+                </div>
               )}
             </Motion>
           </Container>
@@ -193,21 +193,21 @@ export function Nav({ pages }) {
             </Motion>
             <Motion>
               {linksMobile ? (
-                <NavLink
-                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                <div
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80 cursor-pointer"
                   onClick={closeLinksMobile}
                 >
                   Produtos
                   <ChevronUp />
-                </NavLink>
+                </div>
               ) : (
-                <NavLink
-                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80"
+                <div
+                  className="flex text-white hover:border-white transition ease-in-out duration-300 p-1 border-b-2 border-transparent hover:opacity-80 hover:border-opacity-80 cursor-pointer"
                   onClick={openLinksMobile}
                 >
                   Produtos
                   <ChevronDown />
-                </NavLink>
+                </div>
               )}
             </Motion>
           </Container>

@@ -15,6 +15,12 @@ export default {
           "Noto Color Emoji",
         ],
       },
+      gridTemplateColumns: {
+        responsive: "repeat(auto-fit, minmax(240px, 1fr))",
+      },
+      screens: {
+        xs: "320px",
+      },
     },
     backgroundImage: {
       home: "url('/home.webp')",
