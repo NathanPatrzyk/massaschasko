@@ -13,7 +13,12 @@ export function Home({ pages }) {
         pages.map(
           (page) =>
             page.slug == "pierogues" && (
-              <LinkToProduct imageLeft light page={page} />
+              <LinkToProduct
+                imageLeft
+                light
+                page={page}
+                products={["pieroguedebatata400g"]}
+              />
             )
         )}
 

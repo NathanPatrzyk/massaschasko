@@ -11,26 +11,38 @@ export function Product({ category }) {
 
   const { data: products, loading, error } = useFetch(productsUrl);
 
+  const bgClasses = {
+    pieroguedebatata400g: "bg-pieroguedebatata400g",
+  };
+
   return (
     <div className="grid xs:grid-cols-responsive grid-cols-1 gap-8 max-w-full">
       {products &&
         products.map((product) => (
-          <div className="flex flex-col  gap-4 p-4 rounded-md border-4 border-zinc-200 shrink">
-            <img className="bg-green-500 aspect-[13/18] w-full max-w-52" />
-            <h3 className="text-zinc-800 text-xl font-semibold w-full">
-              {product.name}
-            </h3>
-            <Text className="w-full" color="black">
-              {product.description}
-            </Text>
-            <Button externalLink="#" isProductLink bgColor="black">
-              <img
-                className="size-5"
-                src="/whatsapp-white.svg"
-                alt="WhatsApp"
-              />{" "}
-              Fazer Pedido
-            </Button>
+          <div className="bg-white flex flex-col justify-center items-center rounded-md gap-4 py-4 divide-y-2 border-2">
+            <div className="flex-1 flex flex-col items-center px-4 size-full">
+              <div
+                className={`${
+                  bgClasses[product.imageName]
+                } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[13/18] size-full max-w-52 rounded-md`}
+              ></div>
+            </div>
+            <div className="flex-1 flex flex-col gap-4 pt-4">
+              <h3 className="flex-1 text-zinc-800 text-xl text-center font-semibold w-full px-4">
+                {product.name}
+              </h3>
+              <Text className="text-center w-full px-4" color="black">
+                {product.description}
+              </Text>
+              <Button externalLink="#" isProductLink bgColor="black">
+                <img
+                  className="size-5"
+                  src="/whatsapp-white.svg"
+                  alt="WhatsApp"
+                />{" "}
+                Fazer Pedido
+              </Button>
+            </div>
           </div>
         ))}
     </div>

@@ -12,10 +12,7 @@ export const generateImageName = (name: string, weight: string) => {
     name
       .toLowerCase()
       .replace(/[^\w ]+/g, "")
-      .replace(/ +/g, "-") +
-    "-" +
-    weight +
-    ".webp"
+      .replace(/ +/g, "") + weight.toLowerCase()
   );
 };
 

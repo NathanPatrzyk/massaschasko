@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import { Home } from "./pages/home";
 import { About } from "./pages/about";
@@ -26,6 +26,7 @@ export function App() {
             path="/produtos/:slug"
             element={<Products pages={pages} />}
           ></Route>
+          <Route path="/produtos" element={<Navigate to="/produtos/pierogues" />} />
         </Routes>
         <Footer pages={pages} />
       </BrowserRouter>
