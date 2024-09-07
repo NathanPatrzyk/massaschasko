@@ -21,6 +21,18 @@ export function LinkToProduct({
 
   const bgClasses = {
     pieroguedebatata400g: "bg-pieroguedebatata400g",
+    pieroguedebatataebacon400g: "bg-pieroguedebatataebacon400g",
+    pieroguedebatataecarnedesfiada400g: "bg-pieroguedebatataecarnedesfiada400g",
+    pieroguedecalabresa400g: "bg-pieroguedecalabresa400g",
+    pieroguedeespinafrericotaebrocolis400g: "bg-pieroguedeespinafrericotaebrocolis400g",
+    pieroguedebatataefrango400g: "bg-pieroguedebatataefrango400g",
+    pieroguedepizza400g: "bg-pieroguedepizza400g",
+    pieroguetradicional2kg: "bg-pieroguetradicional2kg",
+
+    nhoquerecheadodecarnemoida400g: "bg-nhoquerecheadodecarnemoida400g",
+    nhoquerecheadodefrango1kg: "bg-nhoquerecheadodefrango1kg",
+    nhoquerecheadodequeijo1kg: "bg-nhoquerecheadodequeijo1kg",
+    nhoquetradicional400g: "bg-nhoquetradicional400g",
   };
 
   let flexRow;

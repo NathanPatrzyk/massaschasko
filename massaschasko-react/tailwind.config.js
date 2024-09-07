@@ -35,21 +35,21 @@ export default {
       post8: "url('/post8.webp')",
       post9: "url('/post9.webp')",
 
+      pieroguedebatata400g: "url('/pieroguedebatata400g.webp')",
+      pieroguedebatataebacon400g: "url('/pieroguedebatataebacon400g.webp')",
+      pieroguedebatataecarnedesfiada400g:
+        "url('/pieroguedebatataecarnedesfiada400g.webp')",
+      pieroguedecalabresa400g: "url('/pieroguedecalabresa400g.webp')",
+      pieroguedeespinafrericotaebrocolis400g: "url('/pieroguedeespinafrericotaebrocolis400g.webp')",
+      pieroguedebatataefrango400g: "url('/pieroguedebatataefrango400g.webp')",
+      pieroguedepizza400g: "url('/pieroguedepizza400g.webp')",
+      pieroguetradicional2kg: "url('/pieroguetradicional2kg.webp')",
+
       nhoquerecheadodecarnemoida400g:
         "url('/nhoquerecheadodecarnemoida400g.webp')",
       nhoquerecheadodefrango1kg: "url('/nhoquerecheadodefrango1kg.webp')",
       nhoquerecheadodequeijo1kg: "url('/nhoquerecheadodequeijo1kg.webp')",
       nhoquetradicional400g: "url('/nhoquetradicional400g.webp')",
-
-      pieroguedebatata400g: "url('/pieroguedebatata400g.webp')",
-      pieroguedebatatacombacon400g: "url('/pieroguedebatatacombacon400g.webp')",
-      pieroguedebatataecarnedesfiada400g:
-        "url('/pieroguedebatataecarnedesfiada400g.webp')",
-      pieroguedecalabresa400g: "url('/pieroguedecalabresa400g.webp')",
-      pieroguedeespinafre400g: "url('/pieroguedeespinafre400g.webp')",
-      pieroguedefrango400g: "url('/pieroguedefrango400g.webp')",
-      pieroguedepizza400g: "url('/pieroguedepizza400g.webp')",
-      pieroguetradicional2kg: "url('/pieroguetradicional2kg.webp')",
     },
   },
   plugins: [],

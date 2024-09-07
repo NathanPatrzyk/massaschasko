@@ -17,7 +17,16 @@ export function Home({ pages }) {
                 imageLeft
                 light
                 page={page}
-                products={["pieroguedebatata400g"]}
+                products={[
+                  "pieroguedebatata400g",
+                  "pieroguedebatataebacon400g",
+                  "pieroguedebatataecarnedesfiada400g",
+                  "pieroguedecalabresa400g",
+                  "pieroguedeespinafrericotaebrocolis400g",
+                  "pieroguedebatataefrango400g",
+                  "pieroguedepizza400g",
+                  "pieroguetradicional2kg",
+                ]}
               />
             )
         )}
@@ -28,7 +37,17 @@ export function Home({ pages }) {
         pages.map(
           (page) =>
             page.slug == "nhoques" && (
-              <LinkToProduct imageRight light page={page} />
+              <LinkToProduct
+                imageRight
+                light
+                page={page}
+                products={[
+                  "nhoquerecheadodecarnemoida400g",
+                  "nhoquerecheadodefrango1kg",
+                  "nhoquerecheadodequeijo1kg",
+                  "nhoquetradicional400g",
+                ]}
+              />
             )
         )}
 

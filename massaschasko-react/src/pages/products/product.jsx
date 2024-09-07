@@ -13,6 +13,18 @@ export function Product({ category }) {
 
   const bgClasses = {
     pieroguedebatata400g: "bg-pieroguedebatata400g",
+    pieroguedebatataebacon400g: "bg-pieroguedebatataebacon400g",
+    pieroguedebatataecarnedesfiada400g: "bg-pieroguedebatataecarnedesfiada400g",
+    pieroguedecalabresa400g: "bg-pieroguedecalabresa400g",
+    pieroguedeespinafrericotaebrocolis400g: "bg-pieroguedeespinafrericotaebrocolis400g",
+    pieroguedebatataefrango400g: "bg-pieroguedebatataefrango400g",
+    pieroguedepizza400g: "bg-pieroguedepizza400g",
+    pieroguetradicional2kg: "bg-pieroguetradicional2kg",
+
+    nhoquerecheadodecarnemoida400g: "bg-nhoquerecheadodecarnemoida400g",
+    nhoquerecheadodefrango1kg: "bg-nhoquerecheadodefrango1kg",
+    nhoquerecheadodequeijo1kg: "bg-nhoquerecheadodequeijo1kg",
+    nhoquetradicional400g: "bg-nhoquetradicional400g",
   };
 
   return (
@@ -27,11 +39,11 @@ export function Product({ category }) {
                 } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[13/18] size-full max-w-52 rounded-md`}
               ></div>
             </div>
-            <div className="flex-1 flex flex-col gap-4 pt-4">
-              <h3 className="flex-1 text-zinc-800 text-xl text-center font-semibold w-full px-4">
+            <div className="flex-1 flex flex-col gap-4 pt-4 w-full">
+              <h3 className="text-zinc-800 text-xl text-center font-semibold w-full px-4">
                 {product.name}
               </h3>
-              <Text className="text-center w-full px-4" color="black">
+              <Text className="flex-1 text-center w-full px-4" color="black">
                 {product.description}
               </Text>
               <Button externalLink="#" isProductLink bgColor="black">
