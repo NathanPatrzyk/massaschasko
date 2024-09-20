@@ -101,6 +101,7 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
       processedProducts.push({
         imageName,
         name,
+        weight,
         description,
         messageForWhatsapp,
       });

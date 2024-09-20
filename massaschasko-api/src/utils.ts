@@ -12,9 +12,10 @@ export const generateImageName = (name: string, weight: string) => {
     name
       .toLowerCase()
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[\u0300-\u036f,]/g, "") // Remove acentos e vírgulas
       .replace(/[^\w ]+/g, "")
-      .replace(/ +/g, "") + weight.toLowerCase()
+      .replace(/ +/g, "") +
+    weight.toLowerCase().replace(/[\u0300-\u036f,]/g, "")
   );
 };
 
