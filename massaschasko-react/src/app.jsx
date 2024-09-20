@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-import { Home } from "./pages/home.jsx";
-import { About } from "./pages/about.jsx";
-import { Products } from "./pages/products.jsx";
+import { Home } from "./pages/home/index.jsx";
+import { About } from "./pages/about/index.jsx";
+import { Products } from "./pages/products/index.jsx";
 
 import { Nav } from "./components/nav.jsx";
 import { Footer } from "./components/footer.jsx";
