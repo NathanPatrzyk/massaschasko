@@ -28,7 +28,7 @@ export function Products({ pages }) {
     }
   }, [slug, pages]);
 
-  const url = "http://localhost:8787";
+  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev/";
   const categoriesUrl = page ? `${url}/pages/${page.id}/categories` : null;
 
   const { data: categories, loading, error } = useFetch(categoriesUrl);
