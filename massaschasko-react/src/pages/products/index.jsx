@@ -33,62 +33,66 @@ export function Products({ pages }) {
 
   const { data: categories, loading, error } = useFetch(categoriesUrl);
 
-  return (
-    <>
-      <Container className="bg-zinc-100 flex flex-col gap-8 py-8 md:py-16 pt-24 md:pt-32 w-full">
-        <Motion className="flex items-center justify-between w-full">
-          {previousPage ? (
-            <Link
-              to={`/produtos/${previousPage.slug}`}
-              className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
-            >
-              Anterior
-            </Link>
-          ) : (
-            <div></div>
-          )}
-          {nextPage && (
-            <Link
-              to={`/produtos/${nextPage.slug}`}
-              className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
-            >
-              Próximo
-            </Link>
-          )}
-        </Motion>
-        <Motion className="flex flex-col gap-8 w-full">
-          <Title color="black">{page && page.name}</Title>
-        </Motion>
-        {categories &&
-          categories.map((category) => (
-            <Motion className="flex flex-col gap-8">
-              <Subtitle color="green">
-                {category.name} - {category.weight}
-              </Subtitle>
-              <Product category={category} />
-            </Motion>
-          ))}
-        <Motion className="flex items-center justify-between w-full">
-          {previousPage ? (
-            <Link
-              to={`/produtos/${previousPage.slug}`}
-              className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
-            >
-              Anterior
-            </Link>
-          ) : (
-            <div></div>
-          )}
-          {nextPage && (
-            <Link
-              to={`/produtos/${nextPage.slug}`}
-              className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
-            >
-              Próximo
-            </Link>
-          )}
-        </Motion>
-      </Container>
-    </>
-  );
+  if (categories) {
+    return (
+      <>
+        <Container className="bg-zinc-100 flex flex-col gap-8 py-8 md:py-16 pt-24 md:pt-32 w-full">
+          <Motion className="flex items-center justify-between w-full">
+            {previousPage ? (
+              <Link
+                to={`/produtos/${previousPage.slug}`}
+                className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
+              >
+                Anterior
+              </Link>
+            ) : (
+              <div></div>
+            )}
+            {nextPage && (
+              <Link
+                to={`/produtos/${nextPage.slug}`}
+                className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
+              >
+                Próximo
+              </Link>
+            )}
+          </Motion>
+          <Motion className="flex flex-col gap-8 w-full">
+            <Title color="black">{page && page.name}</Title>
+          </Motion>
+          {categories &&
+            categories.map((category) => (
+              <Motion className="flex flex-col gap-8">
+                <Subtitle color="green">
+                  {category.name} - {category.weight}
+                </Subtitle>
+                <Product category={category} />
+              </Motion>
+            ))}
+          <Motion className="flex items-center justify-between w-full">
+            {previousPage ? (
+              <Link
+                to={`/produtos/${previousPage.slug}`}
+                className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
+              >
+                Anterior
+              </Link>
+            ) : (
+              <div></div>
+            )}
+            {nextPage && (
+              <Link
+                to={`/produtos/${nextPage.slug}`}
+                className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
+              >
+                Próximo
+              </Link>
+            )}
+          </Motion>
+        </Container>
+      </>
+    );
+  } else {
+    return null;
+  }
 }
