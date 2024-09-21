@@ -10,7 +10,7 @@ const app = new Hono<{ Bindings: Env }>();
 
 app.use(
   cors({
-    origin: "https://massaschasko-api.nathanpatrzyk11.workers.dev",
+    origin: "https://massaschasko.pages.dev/",
     allowMethods: ["GET"],
   })
 );
