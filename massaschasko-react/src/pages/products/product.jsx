@@ -136,7 +136,7 @@ export function Product({ category }) {
               <Text className="flex-1 text-center w-full px-4" color="black">
                 {product.description}
               </Text>
-              <Button externalLink="#" isProductLink bgColor="black">
+              <Button externalLink={product.whatsappMessage} isProductLink bgColor="black">
                 <img
                   className="size-5"
                   src="/whatsapp-white.svg"
