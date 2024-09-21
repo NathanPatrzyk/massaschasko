@@ -10,7 +10,11 @@ const app = new Hono<{ Bindings: Env }>();
 
 app.use(
   cors({
-    origin: ["https://massaschasko.pages.dev", "https://massaschasko.com.br"],
+    origin: [
+      "https://massaschasko.pages.dev",
+      "https://massaschasko.com.br",
+      "http://localhost:5173",
+    ],
     allowMethods: ["GET"],
   })
 );
