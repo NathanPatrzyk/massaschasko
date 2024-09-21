@@ -34,8 +34,8 @@ export function Products({ pages }) {
   const { data: categories, loading, error } = useFetch(categoriesUrl);
 
   return (
-    {!loading &&
     <>
+      {!loading &&
       <Container className="bg-zinc-100 flex flex-col gap-8 py-8 md:py-16 pt-24 md:pt-32 w-full">
         <Motion className="flex items-center justify-between w-full">
           {previousPage ? (
@@ -90,7 +90,7 @@ export function Products({ pages }) {
           )}
         </Motion>
       </Container>
+      }
     </>
-    }
   );
 }
