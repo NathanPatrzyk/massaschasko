@@ -10,7 +10,7 @@ import { Footer } from "./components/footer.jsx";
 import { useFetch } from "./hooks/useFetch.jsx";
 
 export function App() {
-  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev/";
+  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
   const pagesUrl = url + "/pages";
 
   const { data: pages, loading, error } = useFetch(pagesUrl);
