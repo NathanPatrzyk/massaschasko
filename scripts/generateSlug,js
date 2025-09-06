@@ -1,0 +1,10 @@
+function generateSlug(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^\w ]+/g, "")
+    .replace(/ +/g, "-");
+}
+
+let category = "Produto";
+
+console.log(category + " -> " + generateSlug(category));

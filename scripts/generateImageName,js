@@ -1,0 +1,18 @@
+function generateImageName(product, weight) {
+  return (
+    product
+      .toLowerCase()
+      .replace(/[^\w ]+/g, "")
+      .replace(/ +/g, "-") +
+    "-" +
+    weight +
+    ".webp"
+  );
+}
+
+let product = "Nome do Produto";
+let weight = "500g";
+
+console.log(
+  product + " + " + weight + " -> " + generateImageName(product, weight)
+);

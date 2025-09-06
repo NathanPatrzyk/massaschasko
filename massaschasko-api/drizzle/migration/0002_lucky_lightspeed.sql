@@ -1,0 +1,1 @@
+ALTER TABLE `pages` ADD `description` text(2000);
