@@ -4,7 +4,8 @@ import { Button } from "../../components/button";
 import { useFetch } from "../../hooks/useFetch";
 
 export function Product({ category }) {
-  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  const url = "http://localhost:8787";
   const productsUrl = category
     ? `${url}/pages/categories/${category.id}/products`
     : null;

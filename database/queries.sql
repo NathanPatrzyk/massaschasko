@@ -1,24 +1,148 @@
-CREATE TABLE page (
-    id_page INT AUTO_INCREMENT,
-    name_page VARCHAR(200) NOT NULL,
-    CONSTRAINT pk_page PRIMARY KEY (id_page)
-)ENGINE = INNODB;
+INSERT INTO pages
+    (name, description)
+VALUES
+    ("Pierogues", "Tradição dos imigrantes poloneses, o pierogue (ou 'pierog') é basicamente um pastel salgado cozido. Com uma massa saborosa recheios únicos, o produto tornou-se carro chefe da Massas Chasko por ser um dos mais procurados pelos consumidores."),
+    ("Nhoques", "O nhoque é um prato típico da cozinha italiana. Trata-se de uma massa cozida dividida em pequenas porções arredondadas, pode ser servida com o molho de preferência. Experimente mais essa delícia da Massas Chasko."),
+    ("Croissants", "O croissant, é um tipo de massa folhada em formato de meia-lua. São consumidos no café da manhã em muitos países europeus e servidos como sobremesa em todo o mundo. Conheça nossas opcões de croissants salgados e doces."),
+    ("Esfihas", "A esfiha é uma pequena torta assada originária da Síria e do Líbano, e encontrada em outros países do Oriente Médio. Conheça nossos produtos e faça seu pedido."),    ("Pães de Queijo", "O pão de queijo é originário de Minas Gerais e surgiu por volta de 1750, usando polvilho de mandioca, queijo, ovos e leite. Conheça nossos produtos e faça seu pedido para experimentar essa delícia."),
+    ("Outros Produtos", "Também possuímos Charuto, Churros, Coxinha, Kibe, Macarrão, Hamburgão e Hot Dog. Conheça nossos produtos e faça seu pedido.");
 
-CREATE TABLE category (
-    id_category INT AUTO_INCREMENT,
-    name_category VARCHAR(200) NOT NULL,
-    weight_category VARCHAR(200) NOT NULL,
-    id_page INT NOT NULL,
-    CONSTRAINT pk_category PRIMARY KEY (id_category),
-    CONSTRAINT fk_category_page FOREIGN KEY (id_page) REFERENCES page(id_page)
-    ON DELETE CASCADE ON UPDATE CASCADE
-)ENGINE = INNODB;
+INSERT INTO categories
+    (name, weight, page_id)
+VALUES
+    ("Pierogues", "400g", 1),
+    ("Pierogues", "2Kg", 1),
+    ("Mini Pierogues", "1Kg", 1),
+    ("Nhoques", "400g", 2),
+    ("Nhoques", "1Kg", 2),
+    ("Croissants", "350g", 3),
+    ("Croissants", "1,2Kg", 3),
+    ("Esfihas", "350g", 4),
+    ("Esfihas", "1,2Kg", 4),
+    ("Esfihas Abertas", "400g", 4),
+    ("Pães de Queijo", "500g", 5),
+    ("Outros Produtos", "400g", 6),
+    ("Outros Produtos", "1Kg", 6),
+    ("Outros Produtos", "1,2Kg", 6);
 
-CREATE TABLE product (
-    id_product INT AUTO_INCREMENT,
-    name_product VARCHAR(200) NOT NULL,
-    id_category INT NOT NULL,
-    CONSTRAINT pk_product PRIMARY KEY (id_product),
-    CONSTRAINT fk_product_category FOREIGN KEY (id_category) REFERENCES category(id_category)
-    ON DELETE CASCADE ON UPDATE CASCADE
-)ENGINE = INNODB;
+INSERT INTO products
+    (name, category_id, nutricional_information)
+VALUES
+    ("Pierogue de Batata", 1, NULL),
+    ("Pierogue de Batata e Bacon", 1, NULL),
+    ("Pierogue de Batata e Frango", 1, NULL),
+    ("Pierogue de Batata e Carne Desfiada", 1, NULL),
+    ("Pierogue de Batata e Repolho", 1, NULL),
+    ("Pierogue de Batata e Rúcula", 1, NULL),
+    ("Pierogue de Calabresa", 1, NULL),
+    ("Pierogue de Espinafre Ricota e Brócolis", 1, NULL),
+    ("Pierogue de Feijão e Bacon", 1, NULL),
+    ("Pierogue de Pizza", 1, NULL),
+    ("Pierogue de Requeijão e Ricota", 1, NULL),
+    ("Pierogue de Ricota com Tomate Seco", 1, NULL),
+    ("Pierogue Tradicional", 1, NULL),
+    ("Pierogue de Batata", 2, NULL),
+    ("Pierogue de Batata e Bacon", 2, NULL),
+    ("Pierogue de Batata e Frango", 2, NULL),
+    ("Pierogue de Calabresa", 2, NULL),
+    ("Pierogue de Requeijão e Ricota", 2, NULL),
+    ("Pierogue Tradicional", 2, NULL),
+    ("Mini Pierogue de Bacon", 3, NULL),
+    ("Mini Pierogue de Calabresa", 3, NULL),
+    ("Mini Pierogue de Carne Desfiada", 3, NULL),
+    ("Mini Pierogue de Espinafre Ricota e Brócolis", 3, NULL),
+    ("Mini Pierogue de Frango", 3, NULL),
+    ("Mini Pierogue de Requeijão", 3, NULL),
+    ("Mini Pierogue Tradicional", 3, NULL),
+    ("Nhoque Tradicional", 4, NULL),
+    ("Nhoque Recheado de Carne Moída", 4, NULL),
+    ("Nhoque Recheado de Frango", 4, NULL),
+    ("Nhoque Recheado de Queijo", 4, NULL),
+    ("Nhoque Tradicional", 5, NULL),
+    ("Nhoque de Espinafre", 5, NULL),
+    ("Nhoque Recheado de Carne Moída", 5, NULL),
+    ("Nhoque Recheado de Frango", 5, NULL),
+    ("Nhoque Recheado de Queijo", 5, NULL),
+    ("Croissant de Carne Moída", 6, NULL),
+    ("Croissant de Frango", 6, NULL),
+    ("Croissant de Pizza", 6, NULL),
+    ("Croissant de Palmito", 6, NULL),
+    ("Croissant de Banana com Canela", 6, NULL),
+    ("Croissant de Chocolate Preto", 6, NULL),
+    ("Croissant de Carne Moída", 7, NULL),
+    ("Croissant de Frango", 7, NULL),
+    ("Croissant de Pizza", 7, NULL),
+    ("Croissant de Chocolate Preto", 7, NULL),
+    ("Esfiha de Carne Moída", 8, NULL),
+    ("Esfiha de Frango", 8, NULL),
+    ("Esfiha de Pizza", 8, NULL),
+    ("Esfiha de Palmito", 8, NULL),
+    ("Esfiha de Costela", 8, NULL),
+    ("Esfiha de Multigrãos", 8, NULL),
+    ("Esfiha de Carne Moída", 9, NULL),
+    ("Esfiha de Frango", 9, NULL),
+    (
+        "Esfiha Aberta de Carne Moída",
+        10,
+        '
+        {
+            "porcoes_por_embalagem": 6,
+            "porcao": "60g (1 unidade)",
+            "valores": {
+                "100g": {
+                "valor_energetico": 267,
+                "carboidratos": 41,
+                "acucares_totais": "",
+                "acucares_adicionados": 4.7,
+                "proteinas": 10,
+                "gorduras_totais": 6.8,
+                "gorduras_saturadas": 1.3,
+                "gorduras_trans": 0,
+                "fibras_alimentares": 1.3,
+                "sodio": 571
+                },
+                "60g": {
+                "valor_energetico": 160,
+                "carboidratos": 25,
+                "acucares_totais": "",
+                "acucares_adicionados": 2.8,
+                "proteinas": 6.1,
+                "gorduras_totais": 4.1,
+                "gorduras_saturadas": 0.8,
+                "gorduras_trans": 0,
+                "fibras_alimentares": 0.8,
+                "sodio": 342
+                },
+                "%VD*": {
+                "valor_energetico": 8,
+                "carboidratos": 8,
+                "acucares_totais": "",
+                "acucares_adicionados": 6,
+                "proteinas": 12,
+                "gorduras_totais": 6,
+                "gorduras_saturadas": 4,
+                "gorduras_trans": 0,
+                "fibras_alimentares": 3,
+                "sodio": 17
+                }
+            }
+        }
+        '
+    ),
+    ("Esfiha Aberta de Frango", 10, NULL),
+    ("Esfiha Aberta de Pizza", 10, NULL),
+    ("Esfiha Aberta de Costela", 10, NULL),
+    ("Esfiha Aberta de Chocolate Preto", 10, NULL),
+    ("Pão de Queijo com Cheddar", 11, NULL),
+    ("Pão de Queijo com Vinagrete", 11, NULL),
+    ("Pão de Queijo Tradicional", 11, NULL),
+    ("Charuto de Repolho", 12, NULL),
+    ("Churros de Doce de Leite com Chocolate", 12, NULL),
+    ("Coxinha de Frango e Catupiry", 12, NULL),
+    ("Kibe Recheado", 12, NULL),
+    ("Macarrão Talharim", 12, NULL),
+    ("Churros de Doce de Leite com Chocolate", 13, NULL),
+    ("Coxinha de Frango e Catupiry", 13, NULL),
+    ("Kibe Recheado", 13, NULL),
+    ("Hamburgão", 14, NULL),
+    ("Hot Dog", 14, NULL);

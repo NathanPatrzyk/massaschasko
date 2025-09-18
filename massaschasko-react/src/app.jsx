@@ -10,7 +10,8 @@ import { Footer } from "./components/footer";
 import { useFetch } from "./hooks/useFetch";
 
 export function App() {
-  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  const url = "http://localhost:8787";
   const pagesUrl = url + "/pages";
 
   const { data: pages, loading, error } = useFetch(pagesUrl);
@@ -26,7 +27,10 @@ export function App() {
             path="/produtos/:slug"
             element={<Products pages={pages} />}
           ></Route>
-          <Route path="/produtos" element={<Navigate to="/produtos/pierogues" />} />
+          <Route
+            path="/produtos"
+            element={<Navigate to="/produtos/pierogues" />}
+          />
         </Routes>
         <Footer pages={pages} />
       </BrowserRouter>

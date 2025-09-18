@@ -17,5 +17,8 @@ export const categories = sqliteTable("categories", {
 export const products = sqliteTable("products", {
   id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
   name: text("name", { length: 200 }).notNull(),
+  nutricionalInformation: text("nutricional_information", {
+    mode: "json",
+  }).$type<Record<string, any>>(),
   categoryId: integer("category_id").references(() => categories.id),
 });
