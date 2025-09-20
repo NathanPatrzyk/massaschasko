@@ -82,6 +82,54 @@ VALUES
     ("Esfiha de Carne Moída", 9, NULL),
     ("Esfiha de Frango", 9, NULL),
     (
+        "Esfiha Aberta de Calabresa",
+        10,
+        '
+        {
+            "porcoes_por_embalagem": 6,
+            "porcao": "60g (1 unidade)",
+            "valores": {
+                "100g": {
+                    "valor_energetico": 327,
+                    "carboidratos": 37,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 4.3,
+                    "proteinas": 10,
+                    "gorduras_totais": 15,
+                    "gorduras_saturadas": 6.2,
+                    "gorduras_trans": 0.2,
+                    "fibras_alimentares": 1,
+                    "sodio": 885
+                },
+                "60g": {
+                    "valor_energetico": 196,
+                    "carboidratos": 22,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 2.6,
+                    "proteinas": 6,
+                    "gorduras_totais": 9.2,
+                    "gorduras_saturadas": 3.7,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 0.6,
+                    "sodio": 531
+                },
+                "%VD*": {
+                    "valor_energetico": 10,
+                    "carboidratos": 7,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 5,
+                    "proteinas": 12,
+                    "gorduras_totais": 14,
+                    "gorduras_saturadas": 19,
+                    "gorduras_trans": 5,
+                    "fibras_alimentares": 2,
+                    "sodio": 27
+                }
+            }
+        }
+        '
+    ),
+    (
         "Esfiha Aberta de Carne Moída",
         10,
         '
@@ -90,40 +138,40 @@ VALUES
             "porcao": "60g (1 unidade)",
             "valores": {
                 "100g": {
-                "valor_energetico": 267,
-                "carboidratos": 41,
-                "acucares_totais": "",
-                "acucares_adicionados": 4.7,
-                "proteinas": 10,
-                "gorduras_totais": 6.8,
-                "gorduras_saturadas": 1.3,
-                "gorduras_trans": 0,
-                "fibras_alimentares": 1.3,
-                "sodio": 571
+                    "valor_energetico": 267,
+                    "carboidratos": 41,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 4.7,
+                    "proteinas": 10,
+                    "gorduras_totais": 6.8,
+                    "gorduras_saturadas": 1.3,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 1.3,
+                    "sodio": 571
                 },
                 "60g": {
-                "valor_energetico": 160,
-                "carboidratos": 25,
-                "acucares_totais": "",
-                "acucares_adicionados": 2.8,
-                "proteinas": 6.1,
-                "gorduras_totais": 4.1,
-                "gorduras_saturadas": 0.8,
-                "gorduras_trans": 0,
-                "fibras_alimentares": 0.8,
-                "sodio": 342
+                    "valor_energetico": 160,
+                    "carboidratos": 25,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 2.8,
+                    "proteinas": 6.1,
+                    "gorduras_totais": 4.1,
+                    "gorduras_saturadas": 0.8,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 0.8,
+                    "sodio": 342
                 },
                 "%VD*": {
-                "valor_energetico": 8,
-                "carboidratos": 8,
-                "acucares_totais": "",
-                "acucares_adicionados": 6,
-                "proteinas": 12,
-                "gorduras_totais": 6,
-                "gorduras_saturadas": 4,
-                "gorduras_trans": 0,
-                "fibras_alimentares": 3,
-                "sodio": 17
+                    "valor_energetico": 8,
+                    "carboidratos": 8,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 6,
+                    "proteinas": 12,
+                    "gorduras_totais": 6,
+                    "gorduras_saturadas": 4,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 3,
+                    "sodio": 17
                 }
             }
         }
@@ -131,6 +179,11 @@ VALUES
     ),
     ("Esfiha Aberta de Frango", 10, NULL),
     ("Esfiha Aberta de Pizza", 10, NULL),
+    (
+        "Esfiha Aberta de Queijo",
+        10,
+        -- CONTINUAR
+    )
     ("Esfiha Aberta de Costela", 10, NULL),
     ("Esfiha Aberta de Chocolate Preto", 10, NULL),
     ("Pão de Queijo com Cheddar", 11, NULL),
