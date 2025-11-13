@@ -63,7 +63,7 @@ export function Footer({ pages }) {
                 <Mail className="size-5" />
               </Button>
               <Button
-                externalLink="https://www.instagram.com/massas_chasko/"
+                externalLink="https://www.instagram.com/chaskomassas/"
                 small
               >
                 <Instagram className="size-5" />
