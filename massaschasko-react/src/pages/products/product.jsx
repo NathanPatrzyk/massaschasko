@@ -137,12 +137,12 @@ export function Product({ category }) {
                     ></div>
                   )}
                 </div>
-                <div className="flex-1 flex flex-col gap-4 pt-4 w-full">
+                <div className="flex-1 flex flex-col gap-4 pt-4 px-4 w-full">
                   <h3 className="text-zinc-800 text-xl text-center font-semibold w-full px-4">
                     {product.name}
                   </h3>
                   <Text
-                    className="flex-1 text-center w-full px-4"
+                    className="flex-1 text-center w-full"
                     color="black"
                   >
                     {product.description}

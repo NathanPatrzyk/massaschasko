@@ -2,26 +2,31 @@
 
 # Define o diretório base do script para evitar problemas de caminho
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
-# Inicia o frontend (React) em segundo plano
-echo "Iniciando o frontend..."
-(cd "$SCRIPT_DIR/massaschasko-react" && npm run dev) &
-FRONTEND_PID=$!
-
-# Inicia o backend (Cloudflare Worker) em segundo plano
+ 
+echo "Iniciando o Drizzle Studio..."
+(cd "$SCRIPT_DIR/massaschasko-api" && npm run db:studio) &
+DRIZZLE_STUDIO_PID=$!
+ 
 echo "Iniciando o backend..."
 (cd "$SCRIPT_DIR/massaschasko-api" && npm run dev) &
 BACKEND_PID=$!
+ 
+echo "Iniciando o frontend..."
+(cd "$SCRIPT_DIR/massaschasko-react" && npm run dev) &
+FRONTEND_PID=$!
+ 
+echo "Abrindo o projeto no VSCode..."
+(code .)
 
-# Função para garantir que os processos sejam encerrados
+echo "Abrindo localhost:5173 no navegador..."
+(xdg-open http://localhost:5173/)
+ 
 cleanup() {
   echo "Encerrando os processos..."
-  kill $FRONTEND_PID $BACKEND_PID 2>/dev/null
+  kill $DRIZZLE_STUDIO_PID $BACKEND_PID $FRONTEND_PID 2>/dev/null
 }
-
-# Configura a armadilha (trap) para o comando Ctrl+C ou encerramento
+ 
 trap cleanup EXIT
-
-# Mantém o script em execução enquanto os processos filhos estiverem ativos
+ 
 echo "Aplicação rodando. Pressione Ctrl+C para parar."
 wait

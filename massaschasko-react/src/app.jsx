@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Home } from "./pages/home";
 import { About } from "./pages/about";
 import { Products } from "./pages/products";
+import { ProductsDetails } from "./pages/products-details";
 
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
@@ -30,6 +31,10 @@ export function App() {
           <Route
             path="/produtos"
             element={<Navigate to="/produtos/pierogues" />}
+          />
+          <Route
+            path="/produtos/esfiha-aberta-de-carne-moida"
+            element={<ProductsDetails />}
           />
         </Routes>
         <Footer pages={pages} />

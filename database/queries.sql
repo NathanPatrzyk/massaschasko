@@ -177,12 +177,103 @@ VALUES
         }
         '
     ),
-    ("Esfiha Aberta de Frango", 10, NULL),
+    (
+        "Esfiha Aberta de Frango",
+        10,
+        '
+        {
+            "porcoes_por_embalagem": 6,
+            "porcao": "60g (½ unidade de 100g)",
+            "valores": {
+                "100g": {
+                    "valor_energetico": 305,
+                    "carboidratos": 45,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 5.2,
+                    "proteinas": 9.8,
+                    "gorduras_totais": 9.5,
+                    "gorduras_saturadas": 2.9,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 1,3,
+                    "sodio": 499
+                },
+                "60g": {
+                    "valor_energetico": 183,
+                    "carboidratos": 27,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 3.1,
+                    "proteinas": 5.9,
+                    "gorduras_totais": 5.7,
+                    "gorduras_saturadas": 1.8,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 0.8,
+                    "sodio": 302
+                },
+                "%VD*": {
+                    "valor_energetico": 9,
+                    "carboidratos": 9,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 6,
+                    "proteinas": 12,
+                    "gorduras_totais": 9,
+                    "gorduras_saturadas": 9,
+                    "gorduras_trans": 5,
+                    "fibras_alimentares": 3,
+                    "sodio": 15
+                }
+            }
+        }
+        '
+        
+    ),
     ("Esfiha Aberta de Pizza", 10, NULL),
     (
         "Esfiha Aberta de Queijo",
         10,
-        -- CONTINUAR
+        '
+        {
+            "porcoes_por_embalagem": 6,
+            "porcao": "60g (1 unidade)",
+            "valores": {
+                "100g": {
+                    "valor_energetico": 326,
+                    "carboidratos": 38,
+                    "acucares_totais": 0.5,
+                    "acucares_adicionados": 4.3,
+                    "proteinas": 12,
+                    "gorduras_totais": 14,
+                    "gorduras_saturadas": 6.8,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 1,
+                    "sodio": 496
+                },
+                "60g": {
+                    "valor_energetico": 196,
+                    "carboidratos": 23,
+                    "acucares_totais": 0.3,
+                    "acucares_adicionados": 2.6,
+                    "proteinas": 7.1,
+                    "gorduras_totais": 8.6,
+                    "gorduras_saturadas": 4.1,
+                    "gorduras_trans": 0,
+                    "fibras_alimentares": 0.6,
+                    "sodio": 298
+                },
+                "%VD*": {
+                    "valor_energetico": 10,
+                    "carboidratos": 8,
+                    "acucares_totais": "",
+                    "acucares_adicionados": 5,
+                    "proteinas": 14,
+                    "gorduras_totais": 13,
+                    "gorduras_saturadas": 21,
+                    "gorduras_trans": 5,
+                    "fibras_alimentares": 2,
+                    "sodio": 15
+                }
+            }
+        }
+        '
     )
     ("Esfiha Aberta de Costela", 10, NULL),
     ("Esfiha Aberta de Chocolate Preto", 10, NULL),
