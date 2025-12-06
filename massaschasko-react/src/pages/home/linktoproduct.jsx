@@ -19,95 +19,97 @@ export function LinkToProduct({
     imageRight: "md:flex-row-reverse",
   };
 
-  const bgClasses = {
-    pieroguedebatata400g: "bg-pieroguedebatata400g",
-    pieroguedebatataebacon400g: "bg-pieroguedebatataebacon400g",
-    pieroguedebatataefrango400g: "bg-pieroguedebatataefrango400g",
-    pieroguedebatataecarnedesfiada400g: "bg-pieroguedebatataecarnedesfiada400g",
-    pieroguedebatataerepolho400g: "bg-pieroguedebatataerepolho400g",
-    pieroguedebatataerucula400g: "bg-pieroguedebatataerucula400g",
-    pieroguedecalabresa400g: "bg-pieroguedecalabresa400g",
+  const imagePaths = {
+    pieroguedebatata400g: "/pieroguedebatata400g.webp",
+    pieroguedebatataebacon400g: "/pieroguedebatataebacon400g.webp",
+    pieroguedebatataefrango400g: "/pieroguedebatataefrango400g.webp",
+    pieroguedebatataecarnedesfiada400g:
+      "/pieroguedebatataecarnedesfiada400g.webp",
+    pieroguedebatataerepolho400g: "/pieroguedebatataerepolho400g.webp",
+    pieroguedebatataerucula400g: "/pieroguedebatataerucula400g.webp",
+    pieroguedecalabresa400g: "/pieroguedecalabresa400g.webp",
     pieroguedeespinafrericotaebrocolis400g:
-      "bg-pieroguedeespinafrericotaebrocolis400g",
-    pieroguedefeijaoebacon400g: "bg-pieroguedefeijaoebacon400g",
-    pieroguedepizza400g: "bg-pieroguedepizza400g",
-    pieroguederequeijaoericota400g: "bg-pieroguederequeijaoericota400g",
-    pieroguedericotacomtomateseco400g: "bg-pieroguedericotacomtomateseco400g",
-    pieroguetradicional400g: "bg-pieroguetradicional400g",
+      "/pieroguedeespinafrericotaebrocolis400g.webp",
+    pieroguedefeijaoebacon400g: "/pieroguedefeijaoebacon400g.webp",
+    pieroguedepizza400g: "/pieroguedepizza400g.webp",
+    pieroguederequeijaoericota400g: "/pieroguederequeijaoericota400g.webp",
+    pieroguedericotacomtomateseco400g:
+      "/pieroguedericotacomtomateseco400g.webp",
+    pieroguetradicional400g: "/pieroguetradicional400g.webp",
 
-    pieroguedebatata2kg: "bg-pieroguedebatata2kg",
-    pieroguedebatataebacon2kg: "bg-pieroguedebatataebacon2kg",
-    pieroguedebatataefrango2kg: "bg-pieroguedebatataefrango2kg",
-    pieroguedecalabresa2kg: "bg-pieroguedecalabresa2kg",
-    pieroguederequeijaoericota2kg: "bg-pieroguederequeijaoericota2kg",
-    pieroguetradicional2kg: "bg-pieroguetradicional2kg",
+    pieroguedebatata2kg: "/pieroguedebatata2kg.webp",
+    pieroguedebatataebacon2kg: "/pieroguedebatataebacon2kg.webp",
+    pieroguedebatataefrango2kg: "/pieroguedebatataefrango2kg.webp",
+    pieroguedecalabresa2kg: "/pieroguedecalabresa2kg.webp",
+    pieroguederequeijaoericota2kg: "/pieroguederequeijaoericota2kg.webp",
+    pieroguetradicional2kg: "/pieroguetradicional2kg.webp",
 
-    minipieroguedebacon1kg: "bg-minipieroguedebacon1kg",
-    minipieroguedecalabresa1kg: "bg-minipieroguedecalabresa1kg",
-    minipieroguedecarnedesfiada1kg: "bg-minipieroguedecarnedesfiada1kg",
+    minipieroguedebacon1kg: "/minipieroguedebacon1kg.webp",
+    minipieroguedecalabresa1kg: "/minipieroguedecalabresa1kg.webp",
+    minipieroguedecarnedesfiada1kg: "/minipieroguedecarnedesfiada1kg.webp",
     minipieroguedeespinafrericotaebrocolis1kg:
-      "bg-minipieroguedeespinafrericotaebrocolis1kg",
-    minipieroguedefrango1kg: "bg-minipieroguedefrango1kg",
-    minipieroguederequeijao1kg: "bg-minipieroguederequeijao1kg",
-    minipieroguetradicional1kg: "bg-minipieroguetradicional1kg",
+      "/minipieroguedeespinafrericotaebrocolis1kg.webp",
+    minipieroguedefrango1kg: "/minipieroguedefrango1kg.webp",
+    minipieroguederequeijao1kg: "/minipieroguederequeijao1kg.webp",
+    minipieroguetradicional1kg: "/minipieroguetradicional1kg.webp",
 
-    nhoquetradicional400g: "bg-nhoquetradicional400g",
-    nhoquerecheadodecarnemoida400g: "bg-nhoquerecheadodecarnemoida400g",
-    nhoquerecheadodefrango400g: "bg-nhoquerecheadodefrango400g",
-    nhoquerecheadodequeijo400g: "bg-nhoquerecheadodequeijo400g",
+    nhoquetradicional400g: "/nhoquetradicional400g.webp",
+    nhoquerecheadodecarnemoida400g: "/nhoquerecheadodecarnemoida400g.webp",
+    nhoquerecheadodefrango400g: "/nhoquerecheadodefrango400g.webp",
+    nhoquerecheadodequeijo400g: "/nhoquerecheadodequeijo400g.webp",
 
-    nhoquetradicional1kg: "bg-nhoquetradicional1kg",
-    nhoquedeespinafre1kg: "bg-nhoquedeespinafre1kg",
-    nhoquerecheadodecarnemoida1kg: "bg-nhoquerecheadodecarnemoida1kg",
-    nhoquerecheadodefrango1kg: "bg-nhoquerecheadodefrango1kg",
-    nhoquerecheadodequeijo1kg: "bg-nhoquerecheadodequeijo1kg",
+    nhoquetradicional1kg: "/nhoquetradicional1kg.webp",
+    nhoquedeespinafre1kg: "/nhoquedeespinafre1kg.webp",
+    nhoquerecheadodecarnemoida1kg: "/nhoquerecheadodecarnemoida1kg.webp",
+    nhoquerecheadodefrango1kg: "/nhoquerecheadodefrango1kg.webp",
+    nhoquerecheadodequeijo1kg: "/nhoquerecheadodequeijo1kg.webp",
 
-    croissantdecarnemoida350g: "bg-croissantdecarnemoida350g",
-    croissantdefrango350g: "bg-croissantdefrango350g",
-    croissantdepizza350g: "bg-croissantdepizza350g",
-    croissantdepalmito350g: "bg-croissantdepalmito350g",
-    croissantdebananacomcanela350g: "bg-croissantdebananacomcanela350g",
-    croissantdechocolatepreto350g: "bg-croissantdechocolatepreto350g",
+    croissantdecarnemoida350g: "/croissantdecarnemoida350g.webp",
+    croissantdefrango350g: "/croissantdefrango350g.webp",
+    croissantdepizza350g: "/croissantdepizza350g.webp",
+    croissantdepalmito350g: "/croissantdepalmito350g.webp",
+    croissantdebananacomcanela350g: "/croissantdebananacomcanela350g.webp",
+    croissantdechocolatepreto350g: "/croissantdechocolatepreto350g.webp",
 
-    croissantdecarnemoida12kg: "bg-croissantdecarnemoida12kg",
-    croissantdefrango12kg: "bg-croissantdefrango12kg",
-    croissantdepizza12kg: "bg-croissantdepizza12kg",
-    croissantdechocolatepreto12kg: "bg-croissantdechocolatepreto12kg",
+    croissantdecarnemoida12kg: "/croissantdecarnemoida12kg.webp",
+    croissantdefrango12kg: "/croissantdefrango12kg.webp",
+    croissantdepizza12kg: "/croissantdepizza12kg.webp",
+    croissantdechocolatepreto12kg: "/croissantdechocolatepreto12kg.webp",
 
-    esfihadecarnemoida350g: "bg-esfihadecarnemoida350g",
-    esfihadefrango350g: "bg-esfihadefrango350g",
-    esfihadepizza350g: "bg-esfihadepizza350g",
-    esfihadepalmito350g: "bg-esfihadepalmito350g",
-    esfihadecostela350g: "bg-esfihadecostela350g",
-    esfihamultigraos350g: "bg-esfihamultigraos350g",
+    esfihadecarnemoida350g: "/esfihadecarnemoida350g.webp",
+    esfihadefrango350g: "/esfihadefrango350g.webp",
+    esfihadepizza350g: "/esfihadepizza350g.webp",
+    esfihadepalmito350g: "/esfihadepalmito350g.webp",
+    esfihadecostela350g: "/esfihadecostela350g.webp",
+    esfihamultigraos350g: "/esfihamultigraos350g.webp",
 
-    esfihadecarnemoida12kg: "bg-esfihadecarnemoida12kg",
-    esfihadefrango12kg: "bg-esfihadefrango12kg",
+    esfihadecarnemoida12kg: "/esfihadecarnemoida12kg.webp",
+    esfihadefrango12kg: "/esfihadefrango12kg.webp",
 
-    esfihaabertadecarnemoida400g: "bg-esfihaabertadecarnemoida400g",
-    esfihaabertadefrango400g: "bg-esfihaabertadefrango400g",
-    esfihaabertadepizza400g: "bg-esfihaabertadepizza400g",
-    esfihaabertadecostela400g: "bg-esfihaabertadecostela400g",
-    esfihaabertadechocolatepreto400g: "bg-esfihaabertadechocolatepreto400g",
+    esfihaabertadecarnemoida400g: "/esfihaabertadecarnemoida400g.webp",
+    esfihaabertadefrango400g: "/esfihaabertadefrango400g.webp",
+    esfihaabertadepizza400g: "/esfihaabertadepizza400g.webp",
+    esfihaabertadecostela400g: "/esfihaabertadecostela400g.webp",
+    esfihaabertadechocolatepreto400g: "/esfihaabertadechocolatepreto400g.webp",
 
-    paodequeijocomcheddar500g: "bg-paodequeijocomcheddar500g",
-    paodequeijocomvinagrete500g: "bg-paodequeijocomvinagrete500g",
-    paodequeijotradicional500g: "bg-paodequeijotradicional500g",
+    paodequeijocomcheddar500g: "/paodequeijocomcheddar500g.webp",
+    paodequeijocomvinagrete500g: "/paodequeijocomvinagrete500g.webp",
+    paodequeijotradicional500g: "/paodequeijotradicional500g.webp",
 
-    charutoderepolho400g: "bg-charutoderepolho400g",
+    charutoderepolho400g: "/charutoderepolho400g.webp",
     churrosdedocedeleitecomchocolate400g:
-      "bg-churrosdedocedeleitecomchocolate400g",
-    coxinhadefrangoecatupiry400g: "bg-coxinhadefrangoecatupiry400g",
-    kiberecheado400g: "bg-kiberecheado400g",
-    macarraotalharim400g: "bg-macarraotalharim400g",
+      "/churrosdedocedeleitecomchocolate400g.webp",
+    coxinhadefrangoecatupiry400g: "/coxinhadefrangoecatupiry400g.webp",
+    kiberecheado400g: "/kiberecheado400g.webp",
+    macarraotalharim400g: "/macarraotalharim400g.webp",
 
     churrosdedocedeleitecomchocolate1kg:
-      "bg-churrosdedocedeleitecomchocolate1kg",
-    coxinhadefrangoecatupiry1kg: "bg-coxinhadefrangoecatupiry1kg",
-    kiberecheado1kg: "bg-kiberecheado1kg",
+      "/churrosdedocedeleitecomchocolate1kg.webp",
+    coxinhadefrangoecatupiry1kg: "/coxinhadefrangoecatupiry1kg.webp",
+    kiberecheado1kg: "/kiberecheado1kg.webp",
 
-    hamburgao12kg: "bg-hamburgao12kg",
-    hotdog12kg: "bg-hotdog12kg",
+    hamburgao12kg: "/hamburgao12kg.webp",
+    hotdog12kg: "/hotdog12kg.webp",
   };
 
   let flexRow;
@@ -117,6 +119,11 @@ export function LinkToProduct({
     flexRow = "imageRight";
   }
 
+  const imageClasses =
+    "object-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300 w-full h-full";
+
+  const getImagePath = (productName) => imagePaths[productName] || "";
+
   if (light) {
     return (
       <Container
@@ -125,60 +132,51 @@ export function LinkToProduct({
         } items-center justify-center gap-8 md:pb-16 p-8 md:p-16`}
       >
         <Motion className="md:shrink-0 grid grid-cols-3 grid-rows-3 gap-2 h-[100vw] max-h-96 max-w-[78vw]">
-          <div
-            className={
-              bgClasses[products && products[0]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[1]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[2]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[3]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[4]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[5]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[6]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[7]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[8]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
+          <img
+            src={getImagePath(products && products[0])}
+            alt={products && products[0]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[1])}
+            alt={products && products[1]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[2])}
+            alt={products && products[2]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[3])}
+            alt={products && products[3]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[4])}
+            alt={products && products[4]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[5])}
+            alt={products && products[5]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[6])}
+            alt={products && products[6]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[7])}
+            alt={products && products[7]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[8])}
+            alt={products && products[8]}
+            className={imageClasses}
+          />
         </Motion>
 
         <Motion className="flex flex-col gap-4">
@@ -198,60 +196,51 @@ export function LinkToProduct({
         } items-center justify-center gap-8 md:pb-16 p-8 md:p-16`}
       >
         <Motion className="md:shrink-0 grid grid-cols-3 grid-rows-3 gap-2 h-96 max-w-[78vw]">
-          <div
-            className={
-              bgClasses[products && products[0]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[1]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[2]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[3]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[4]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[5]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[6]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[7]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
-          <div
-            className={
-              bgClasses[products && products[8]] +
-              " bg-contain aspect-[13/18] rounded-md hover:scale-105 transition ease-in-out duration-300"
-            }
-          ></div>
+          <img
+            src={getImagePath(products && products[0])}
+            alt={products && products[0]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[1])}
+            alt={products && products[1]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[2])}
+            alt={products && products[2]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[3])}
+            alt={products && products[3]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[4])}
+            alt={products && products[4]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[5])}
+            alt={products && products[5]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[6])}
+            alt={products && products[6]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[7])}
+            alt={products && products[7]}
+            className={imageClasses}
+          />
+          <img
+            src={getImagePath(products && products[8])}
+            alt={products && products[8]}
+            className={imageClasses}
+          />
         </Motion>
 
         <Motion className="flex flex-col gap-4">
