@@ -3,6 +3,7 @@ import { Button } from "../../components/button";
 import { Title } from "../../components/title";
 import { Subtitle } from "../../components/subtitle";
 import { Motion } from "../../components/motion";
+import { CookingPot, Microwave, Refrigerator } from "lucide-react";
 
 const info = {
   porcoes_por_embalagem: 6,
@@ -53,7 +54,11 @@ const infoParser = {
   acucares_totais: " Açúcares totais (g)",
   acucares_adicionados: "  Açúcares adicionados (g)",
   proteinas: "Proteínas (g)",
-  gorduras_totais: "Gorduras totais (",
+  gorduras_totais: "Gorduras totais (g)",
+  gorduras_saturadas: " Gorduras saturadas (g)",
+  gorduras_trans: " Gorduras trans (g)",
+  fibras_alimentares: "Fibras alimentares (g)",
+  sodio: "Sódio (mg)",
 };
 
 export function ProductDetail() {
@@ -85,8 +90,39 @@ export function ProductDetail() {
           </Button>
         </div>
       </Motion>
+      <Motion className="grid md:grid-cols-3 grid-cols-1 place-items-center gap-4 p-4 w-full max-w-5xl mx-auto text-center">
+        <div className="flex flex-col gap-4 items-center">
+          <Microwave className="size-16 bg-green-600/15 text-green-600 p-3 rounded-full" />{" "}
+          <Text>
+            <strong>Microondas:</strong> Aqueça por 30 seg. resfriada e 1 min.
+            congelada.
+          </Text>
+        </div>
+        <div className="flex flex-col gap-4 items-center">
+          <CookingPot className="size-16 bg-green-600/15 text-green-600 p-3 rounded-full" />{" "}
+          <Text>
+            <strong>Air Fryer:</strong> Conforme a potência do seu aparelho.
+          </Text>
+        </div>
+        <div className="flex flex-col gap-4 items-center">
+          <Refrigerator className="size-16 bg-green-600/15 text-green-600 p-3 rounded-full" />{" "}
+          <Text>
+            <strong>Refrigerado:</strong> Até +5ºC
+            <br />
+            <strong>Congelado:</strong> -5ºC a -20ºC
+          </Text>
+        </div>
+      </Motion>
       <Motion className="flex flex-col gap-4 w-full max-w-5xl mx-auto">
-        <Subtitle color="green">Ingredientes</Subtitle>
+        <div className="flex flex-col sm:flex-row gap-4 w-full justify-between sm:items-end items-start">
+          <div className="flex flex-col gap-4">
+            <Subtitle color="green">Ingredientes</Subtitle>
+            <Text>
+              <strong>CONTÉM GLÚTEN</strong>
+            </Text>
+          </div>
+          <img className="h-20" src="/alto-em-sodio.png" alt="Alto em Sódio" />
+        </div>
         <Text>
           <strong>Massa:</strong> Farinha preparada (farinha de trigo
           enriquecida com ferro e ácido fólico, açúcar, sal e emulsificantes
@@ -103,8 +139,7 @@ export function ProductDetail() {
         </Text>
         <Text>
           <strong>
-            ALÉRGICOS: CONTÉM OVOS, CONTÉM DERIVADOS DE SOJA E CONTÉM DERIVADOS
-            DE TRIGO.
+            ALÉRGICOS: CONTÉM OVOS, DERIVADOS DE SOJA E DERIVADOS DE TRIGO.
           </strong>
         </Text>
       </Motion>
@@ -116,7 +151,7 @@ export function ProductDetail() {
           Porção: {info.porcao}
         </Text>
       </Motion>
-      <Motion className="flex flex-col w-full max-w-5xl mx-auto overflow-x-au">
+      <Motion className="flex flex-col w-full max-w-5xl mx-auto overflow-x-auto">
         <div className="grid grid-cols-[minmax(200px,auto),1fr,1fr,1fr]">
           <div className="contents text-white font-bold rounded-md">
             <span className="bg-green-500 first:rounded-l-md last:rounded-r-md"></span>
@@ -136,7 +171,7 @@ export function ProductDetail() {
                   key={nutrient}
                   className="p-2 whitespace-pre-wrap break-words"
                 >
-                  {infoParser[nutrient] ? infoParser[nutrient] : "TODO"}
+                  {infoParser[nutrient] && infoParser[nutrient]}
                 </span>
                 {titles.map((title) => (
                   <span key={title} className="text-center p-2">
@@ -146,39 +181,10 @@ export function ProductDetail() {
               </>
             ))}
           </div>
+          <div className="col-span-4 p-2">
+            * Percentual de valores diários fornecidos pela porção.
+          </div>
         </div>
-
-        {/* <div className="max-w-md mx-auto border border-gray-300 rounded-lg overflow-hidden text-sm">
-          <div className="bg-gray-100 p-2 font-bold text-center">
-            INFORMAÇÃO NUTRICIONAL
-          </div>
-          <div className="p-2 border-b border-gray-300">
-            Porção de {info.porcao} — {info.porcoes_por_embalagem} porções por
-            embalagem
-          </div>
-          <table className="w-full text-left">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="p-2">Nutriente</th>
-                <th className="p-2">Por porção (60g)</th>
-                <th className="p-2">%VD*</th>
-              </tr>
-            </thead>
-            <tbody>
-              {nutrientes.map((key) => (
-                <tr key={key} className="border-t">
-                  <td className="p-2 capitalize">{key.replaceAll("_", " ")}</td>
-                  <td className="p-2">{info.valores["60g"][key] || "-"}</td>
-                  <td className="p-2">{info.valores["%VD*"][key] || "-"}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="text-xs text-gray-600 p-2">
-            *% Valores Diários de referência com base em uma dieta de 2.000
-            kcal.
-          </div>
-        </div> */}
       </Motion>
     </>
   );
