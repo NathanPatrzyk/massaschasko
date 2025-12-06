@@ -22,6 +22,13 @@
       "when": 1719359684959,
       "tag": "0002_lucky_lightspeed",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1758149614678,
+      "tag": "0003_next_lethal_legion",
+      "breakpoints": true
     }
   ]
 }

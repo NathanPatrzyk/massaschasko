@@ -1,0 +1,42 @@
+{
+  "porcoes_por_embalagem": 6,
+  "porcao": "60g (1 unidade)",
+  "valores": {
+    "100g": {
+      "valor_energetico": 267,
+      "carboidratos": 41,
+      "acucares_totais": "",
+      "acucares_adicionados": 4.7,
+      "proteinas": 10,
+      "gorduras_totais": 6.8,
+      "gorduras_saturadas": 1.3,
+      "gorduras_trans": 0,
+      "fibras_alimentares": 1.3,
+      "sodio": 571
+    },
+    "60g": {
+      "valor_energetico": 160,
+      "carboidratos": 25,
+      "acucares_totais": "",
+      "acucares_adicionados": 2.8,
+      "proteinas": 6.1,
+      "gorduras_totais": 4.1,
+      "gorduras_saturadas": 0.8,
+      "gorduras_trans": 0,
+      "fibras_alimentares": 0.8,
+      "sodio": 342
+    },
+    "%VD*": {
+      "valor_energetico": 8,
+      "carboidratos": 8,
+      "acucares_totais": "",
+      "acucares_adicionados": 6,
+      "proteinas": 12,
+      "gorduras_totais": 6,
+      "gorduras_saturadas": 4,
+      "gorduras_trans": 0,
+      "fibras_alimentares": 3,
+      "sodio": 17
+    }
+  }
+}
