@@ -83,7 +83,7 @@ export function Footer({ pages }) {
             href="https://www.instagram.com/nwp.software/"
             target="_blank"
           >
-            © <span className="underline">NWP Software 2024</span>
+            © <span className="underline">NWP Software 2025</span>
           </a>
         </Motion>
       </Container>

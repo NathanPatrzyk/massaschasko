@@ -41,7 +41,7 @@ export function Button({
       } else if (bgColor == "black") {
         if (isProductLink) {
           return (
-            <a className="w-full px-4" href={externalLink} target="_blank">
+            <a href={externalLink} target="_blank">
               <button
                 className={`bg-green-600 text-white font-bold rounded-md transition ease-in-out duration-300 flex justify-center items-center gap-2 py-2 px-4 w-full hover:opacity-80 ${className}`}
               >

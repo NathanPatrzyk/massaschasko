@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Home } from "./pages/home";
 import { About } from "./pages/about";
 import { Products } from "./pages/products";
+import { ProductsDetails } from "./pages/products-details";
 
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
@@ -10,7 +11,8 @@ import { Footer } from "./components/footer";
 import { useFetch } from "./hooks/useFetch";
 
 export function App() {
-  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  const url = "http://localhost:8787";
   const pagesUrl = url + "/pages";
 
   const { data: pages, loading, error } = useFetch(pagesUrl);
@@ -26,7 +28,14 @@ export function App() {
             path="/produtos/:slug"
             element={<Products pages={pages} />}
           ></Route>
-          <Route path="/produtos" element={<Navigate to="/produtos/pierogues" />} />
+          <Route
+            path="/produtos"
+            element={<Navigate to="/produtos/pierogues" />}
+          />
+          <Route
+            path="/produtos/esfiha-aberta-de-carne-moida"
+            element={<ProductsDetails />}
+          />
         </Routes>
         <Footer pages={pages} />
       </BrowserRouter>

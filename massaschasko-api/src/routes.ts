@@ -87,6 +87,8 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
     const processedProducts: any[] = [];
 
     queriedProducts.map(async (queriedProduct) => {
+      const id: number = queriedProduct.id;
+
       const name: string = queriedProduct.name;
 
       const imageName: string = generateImageName(name, weight);
@@ -99,6 +101,7 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
       );
 
       processedProducts.push({
+        id,
         imageName,
         name,
         weight,
@@ -108,5 +111,46 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
     });
 
     return c.json(processedProducts);
+  });
+
+  app.get("/pages/categories/products/:product_id", async (c) => {
+    const productId = Number(c.req.param("product_id"));
+
+    const db = drizzle(c.env.DB);
+
+    const queriedProduct = await db
+      .select()
+      .from(products)
+      .where(eq(products.id, productId))
+      .limit(1);
+
+    const { name, nutricionalInformation, categoryId } = queriedProduct[0];
+
+    if (!categoryId) {
+      return c.json({ error: "Produto não possui categoria" });
+    }
+
+    const queriedProductCategory = await db
+      .select()
+      .from(categories)
+      .where(eq(categories.id, categoryId))
+      .limit(1);
+
+    const { weight } = queriedProductCategory[0];
+
+    const imageName: string = generateImageName(name, weight);
+
+    const description: string = generateDescription(weight);
+
+    const messageForWhatsapp: string = generateMessageForWhatsapp(name, weight);
+
+    return c.json({
+      imageName,
+      name,
+      weight,
+      description,
+      messageForWhatsapp,
+      nutricionalInformation,
+    });
   });
 };

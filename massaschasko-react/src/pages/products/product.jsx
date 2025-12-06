@@ -4,7 +4,8 @@ import { Button } from "../../components/button";
 import { useFetch } from "../../hooks/useFetch";
 
 export function Product({ category }) {
-  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  const url = "http://localhost:8787";
   const productsUrl = category
     ? `${url}/pages/categories/${category.id}/products`
     : null;
@@ -136,12 +137,12 @@ export function Product({ category }) {
                     ></div>
                   )}
                 </div>
-                <div className="flex-1 flex flex-col gap-4 pt-4 w-full">
+                <div className="flex-1 flex flex-col gap-4 pt-4 px-4 w-full">
                   <h3 className="text-zinc-800 text-xl text-center font-semibold w-full px-4">
                     {product.name}
                   </h3>
                   <Text
-                    className="flex-1 text-center w-full px-4"
+                    className="flex-1 text-center w-full"
                     color="black"
                   >
                     {product.description}

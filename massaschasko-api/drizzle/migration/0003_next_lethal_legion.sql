@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `nutricional_information` text;
