@@ -28,8 +28,8 @@ export function Products({ pages }) {
     }
   }, [slug, pages]);
 
-  // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
-  const url = "http://localhost:8787";
+  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  // const url = "http://localhost:8787";
 
   const categoriesUrl = page ? `${url}/pages/${page.id}/categories` : null;
 
