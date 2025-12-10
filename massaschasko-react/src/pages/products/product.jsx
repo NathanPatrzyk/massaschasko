@@ -107,7 +107,7 @@ export function Product({ category }) {
     <>
       {loading && (
         <div className="bg-zinc-100 flex">
-          <p className="text-zinc-900">Carregando...</p>
+          <p>Carregando...</p>
         </div>
       )}
       {!loading && (
@@ -141,10 +141,7 @@ export function Product({ category }) {
                   <h3 className="text-zinc-800 text-xl text-center font-semibold w-full px-4">
                     {product.name}
                   </h3>
-                  <Text
-                    className="flex-1 text-center w-full"
-                    color="black"
-                  >
+                  <Text className="flex-1 text-center w-full">
                     {product.description}
                   </Text>
                   <Button

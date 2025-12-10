@@ -181,7 +181,7 @@ export function LinkToProduct({
 
         <Motion className="flex flex-col gap-4">
           <Subtitle color="green">{page.name}</Subtitle>
-          <Text color="black">{page.description}</Text>
+          <Text>{page.description}</Text>
           <Button link={`/produtos/${page.slug}`}>
             Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
           </Button>

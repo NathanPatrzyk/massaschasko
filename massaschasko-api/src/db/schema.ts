@@ -20,5 +20,6 @@ export const products = sqliteTable("products", {
   nutricionalInformation: text("nutricional_information", {
     mode: "json",
   }).$type<Record<string, any>>(),
+  ingredients: text("ingredients"),
   categoryId: integer("category_id").references(() => categories.id),
 });

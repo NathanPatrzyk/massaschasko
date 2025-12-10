@@ -39,7 +39,7 @@ export function Products({ pages }) {
     <>
       {loading && (
         <div className="h-screen bg-zinc-100 flex justify-center py-8 md:py-16 pt-24 md:pt-32">
-          <p className="text-zinc-900">Carregando...</p>
+          <p>Carregando...</p>
         </div>
       )}
       {!loading && (

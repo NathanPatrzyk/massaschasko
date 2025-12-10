@@ -29,6 +29,20 @@
       "when": 1758149614678,
       "tag": "0003_next_lethal_legion",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1765037588525,
+      "tag": "0004_secret_silhouette",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1765037937271,
+      "tag": "0005_lucky_betty_brant",
+      "breakpoints": true
     }
   ]
 }

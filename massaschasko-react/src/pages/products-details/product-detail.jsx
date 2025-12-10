@@ -123,25 +123,25 @@ export function ProductDetail() {
           </div>
           <img className="h-20" src="/alto-em-sodio.png" alt="Alto em Sódio" />
         </div>
-        <Text>
+        <p>
           <strong>Massa:</strong> Farinha preparada (farinha de trigo
           enriquecida com ferro e ácido fólico, açúcar, sal e emulsificantes
           (INS 471, INS 482, INS 433, INS 472 e melhoradores de farinha
           alfa-amilase INS 927, INS 300)), farinha de trigo, água, óleo de soja,
           açúcar refinado, ovo, sal e fermento quimico (saccharomyces
           cerevisiae).
-        </Text>
-        <Text>
+        </p>
+        <p>
           <strong>Recheio:</strong> Carne bovina moída magra, tomate, suco de
           limão, cebola e molho vinagrete (cebola em flocos, cebolinha verde,
           coentro em pó, orégano, pimentão verde, pimentão vermelho, salsinha
           verde e tomate em flocos).
-        </Text>
-        <Text>
+        </p>
+        <p>
           <strong>
             ALÉRGICOS: CONTÉM OVOS, DERIVADOS DE SOJA E DERIVADOS DE TRIGO.
           </strong>
-        </Text>
+        </p>
       </Motion>
       <Motion className="flex flex-col gap-4 w-full max-w-5xl mx-auto">
         <Subtitle color="green">Informação Nutricional</Subtitle>
