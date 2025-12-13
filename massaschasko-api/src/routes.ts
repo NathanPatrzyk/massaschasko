@@ -95,19 +95,32 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
 
       const description: string = generateDescription(weight);
 
-      const messageForWhatsapp: string = generateMessageForWhatsapp(
-        name,
-        weight
-      );
+      if (queriedProduct.nutricionalInformation || queriedProduct.ingredients) {
+        const slug: string = generateSlug(name);
 
-      processedProducts.push({
-        id,
-        imageName,
-        name,
-        weight,
-        description,
-        messageForWhatsapp,
-      });
+        processedProducts.push({
+          id,
+          imageName,
+          name,
+          weight,
+          description,
+          slug,
+        });
+      } else {
+        const messageForWhatsapp: string = generateMessageForWhatsapp(
+          name,
+          weight
+        );
+
+        processedProducts.push({
+          id,
+          imageName,
+          name,
+          weight,
+          description,
+          messageForWhatsapp,
+        });
+      }
     });
 
     return c.json(processedProducts);
@@ -124,7 +137,8 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
       .where(eq(products.id, productId))
       .limit(1);
 
-    const { name, nutricionalInformation, categoryId } = queriedProduct[0];
+    const { name, nutricionalInformation, ingredients, categoryId } =
+      queriedProduct[0];
 
     if (!categoryId) {
       return c.json({ error: "Produto não possui categoria" });
@@ -151,6 +165,7 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
       description,
       messageForWhatsapp,
       nutricionalInformation,
+      ingredients,
     });
   });
 };
