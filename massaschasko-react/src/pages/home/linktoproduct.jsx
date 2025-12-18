@@ -81,7 +81,7 @@ export function LinkToProduct({
     esfihadepizza350g: "/esfihadepizza350g.webp",
     esfihadepalmito350g: "/esfihadepalmito350g.webp",
     esfihadecostela350g: "/esfihadecostela350g.webp",
-    esfihamultigraos350g: "/esfihamultigraos350g.webp",
+    esfihademultigraos350g: "/esfihademultigraos350g.webp",
 
     esfihadecarnemoida12kg: "/esfihadecarnemoida12kg.webp",
     esfihadefrango12kg: "/esfihadefrango12kg.webp",
@@ -181,7 +181,7 @@ export function LinkToProduct({
 
         <Motion className="flex flex-col gap-4">
           <Subtitle color="green">{page.name}</Subtitle>
-          <Text color="black">{page.description}</Text>
+          <Text>{page.description}</Text>
           <Button link={`/produtos/${page.slug}`}>
             Conheça Nossos Produtos <ChevronRight className="shrink-0 size-5" />
           </Button>

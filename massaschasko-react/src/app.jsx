@@ -5,6 +5,8 @@ import { About } from "./pages/about";
 import { Products } from "./pages/products";
 import { ProductsDetails } from "./pages/products-details";
 
+import { PreviewProductsDetails } from "./pages/products-details/preview-product-details";
+
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 
@@ -22,19 +24,23 @@ export function App() {
       <BrowserRouter>
         <Nav pages={pages} />
         <Routes>
-          <Route path="/" element={<Home pages={pages} />}></Route>
-          <Route path="/sobre" element={<About />}></Route>
+          <Route path="/" element={<Home pages={pages} />} />
+          <Route path="/sobre" element={<About />} />
           <Route
-            path="/produtos/:slug"
+            path="/produtos/:categorySlug"
             element={<Products pages={pages} />}
-          ></Route>
+          />
           <Route
             path="/produtos"
             element={<Navigate to="/produtos/pierogues" />}
           />
           <Route
-            path="/produtos/esfiha-aberta-de-carne-moida"
-            element={<ProductsDetails />}
+            path="/produtos/modelo/modelo"
+            element={<PreviewProductsDetails />}
+          />
+          <Route
+            path="/produtos/:categorySlug/:productSlug"
+            element={<ProductsDetails pages={pages} />}
           />
         </Routes>
         <Footer pages={pages} />

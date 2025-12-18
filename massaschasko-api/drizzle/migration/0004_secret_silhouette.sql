@@ -1,0 +1,1 @@
+-- ALTER TABLE `products` ADD `ingredients` text NOT NULL;
