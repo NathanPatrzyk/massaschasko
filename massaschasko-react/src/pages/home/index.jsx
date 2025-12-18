@@ -65,7 +65,7 @@ export function Home({ pages }) {
     esfihadepizza350g: "bg-esfihadepizza350g",
     esfihadepalmito350g: "bg-esfihadepalmito350g",
     esfihadecostela350g: "bg-esfihadecostela350g",
-    esfihamultigraos350g: "bg-esfihamultigraos350g",
+    esfihademultigraos350g: "bg-esfihademultigraos350g",
 
     esfihadecarnemoida12kg: "bg-esfihadecarnemoida12kg",
     esfihadefrango12kg: "bg-esfihadefrango12kg",
@@ -189,7 +189,7 @@ export function Home({ pages }) {
                   "esfihadepizza350g",
                   "esfihadepalmito350g",
                   "esfihadecostela350g",
-                  "esfihamultigraos350g",
+                  "esfihademultigraos350g",
                   "esfihaabertadecarnemoida400g",
                   "esfihaabertadefrango400g",
                   "esfihaabertadepizza400g",

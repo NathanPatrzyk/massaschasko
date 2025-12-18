@@ -96,7 +96,7 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
       const description: string = generateDescription(weight);
 
       if (queriedProduct.nutricionalInformation || queriedProduct.ingredients) {
-        const slug: string = generateSlug(name);
+        const slug: string = generateSlug(`${name} ${weight}`);
 
         processedProducts.push({
           id,
@@ -167,5 +167,43 @@ export const routes = (app: Hono<{ Bindings: { DB: D1Database } }>) => {
       nutricionalInformation,
       ingredients,
     });
+  });
+
+  app.get("/pages/products/slugs", async (c) => {
+    const db = drizzle(c.env.DB);
+
+    const queriedProducts = await db
+      .select({
+        id: products.id,
+        name: products.name,
+        categoryId: products.categoryId,
+      })
+      .from(products);
+
+    const queriedCategories = await db
+      .select({
+        id: categories.id,
+        weight: categories.weight,
+      })
+      .from(categories);
+
+    const slugs = queriedProducts
+      .map((product) => {
+        const category = queriedCategories.find(
+          (c) => c.id === product.categoryId
+        );
+
+        if (!category) return null;
+
+        const slug = generateSlug(`${product.name} ${category.weight}`);
+
+        return {
+          id: product.id,
+          slug,
+        };
+      })
+      .filter(Boolean);
+
+    return c.json(slugs);
   });
 };

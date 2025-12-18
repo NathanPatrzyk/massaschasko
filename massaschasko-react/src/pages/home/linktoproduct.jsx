@@ -81,7 +81,7 @@ export function LinkToProduct({
     esfihadepizza350g: "/esfihadepizza350g.webp",
     esfihadepalmito350g: "/esfihadepalmito350g.webp",
     esfihadecostela350g: "/esfihadecostela350g.webp",
-    esfihamultigraos350g: "/esfihamultigraos350g.webp",
+    esfihademultigraos350g: "/esfihademultigraos350g.webp",
 
     esfihadecarnemoida12kg: "/esfihadecarnemoida12kg.webp",
     esfihadefrango12kg: "/esfihadefrango12kg.webp",

@@ -27,3 +27,8 @@ export const generateMessageForWhatsapp = (name: string, weight: string) => {
   let text = "Olá, estou interessado no produto: " + name + " " + weight;
   return encodeURI(text.trim().replace(/[\s]/g, "+"));
 };
+
+export const extractWeightFromSlug = (slug: string) => {
+  const match = slug.match(/(\d+(?:kg|g))$/i);
+  return match ? match[1].toLowerCase() : null;
+};
