@@ -2,8 +2,10 @@ import { Text } from "../../components/text";
 import { Button } from "../../components/button";
 
 import { useFetch } from "../../hooks/useFetch";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
-export function Product({ category }) {
+export function Product({ category, categorySlug }) {
   // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
   const url = "http://localhost:8787";
   const productsUrl = category
@@ -72,7 +74,7 @@ export function Product({ category }) {
     esfihadepizza350g: "bg-esfihadepizza350g",
     esfihadepalmito350g: "bg-esfihadepalmito350g",
     esfihadecostela350g: "bg-esfihadecostela350g",
-    esfihamultigraos350g: "bg-esfihamultigraos350g",
+    esfihademultigraos350g: "bg-esfihademultigraos350g",
 
     esfihadecarnemoida12kg: "bg-esfihadecarnemoida12kg",
     esfihadefrango12kg: "bg-esfihadefrango12kg",
@@ -82,6 +84,8 @@ export function Product({ category }) {
     esfihaabertadepizza400g: "bg-esfihaabertadepizza400g",
     esfihaabertadecostela400g: "bg-esfihaabertadecostela400g",
     esfihaabertadechocolatepreto400g: "bg-esfihaabertadechocolatepreto400g",
+    esfihaabertadecalabresa400g: "bg-esfihaabertadecalabresa400g",
+    esfihaabertadequeijo400g: "bg-esfihaabertadequeijo400g",
 
     paodequeijocomcheddar500g: "bg-paodequeijocomcheddar500g",
     paodequeijocomvinagrete500g: "bg-paodequeijocomvinagrete500g",
@@ -107,64 +111,78 @@ export function Product({ category }) {
     <>
       {loading && (
         <div className="bg-zinc-100 flex">
-          <p className="text-zinc-900">Carregando...</p>
+          <p>Carregando...</p>
         </div>
       )}
       {!loading && (
         <div className="grid xs:grid-cols-responsive grid-cols-1 gap-8 max-w-full">
           {products &&
-            products.map((product) => (
-              <div className="bg-white flex flex-col justify-center items-center rounded-md gap-4 py-4 divide-y-2 border-2">
-                <div className="flex-1 flex flex-col items-center px-4 size-full">
-                  {(product.name.includes("Mini Pierogue") ||
-                    product.name.includes("Nhoque") ||
-                    product.name.includes(
-                      "Churros de Doce de Leite com Chocolate"
-                    ) ||
-                    product.name.includes("Coxinha de Frango e Catupiry") ||
-                    product.name.includes("Kibe Recheado")) &&
-                  product.weight.includes("1Kg") ? (
-                    <div
-                      className={`${
-                        bgClasses[product.imageName]
-                      } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[1/2] size-full max-w-36 rounded-md`}
-                    ></div>
-                  ) : (
-                    <div
-                      className={`${
-                        bgClasses[product.imageName]
-                      } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[13/18] size-full max-w-52 rounded-md`}
-                    ></div>
-                  )}
-                </div>
-                <div className="flex-1 flex flex-col gap-4 pt-4 px-4 w-full">
-                  <h3 className="text-zinc-800 text-xl text-center font-semibold w-full px-4">
-                    {product.name}
-                  </h3>
-                  <Text
-                    className="flex-1 text-center w-full"
-                    color="black"
-                  >
-                    {product.description}
-                  </Text>
-                  <Button
-                    externalLink={
-                      "https://api.whatsapp.com/send/?phone=5542998138118&text=" +
-                      product.messageForWhatsapp
-                    }
-                    isProductLink
-                    bgColor="black"
-                  >
-                    <img
-                      className="size-5"
-                      src="/whatsapp-white.svg"
-                      alt="WhatsApp"
-                    />{" "}
-                    Fazer Pedido
-                  </Button>
-                </div>
-              </div>
-            ))}
+            products.map((product) => {
+              const hasSlug = !!product.slug;
+              const hasWhatsapp = !!product.messageForWhatsapp;
+
+              return (
+                <>
+                  <div className="bg-white flex flex-col justify-center items-center rounded-md gap-4 py-4 divide-y-2 border-2">
+                    <div className="flex-1 flex flex-col items-center px-4 size-full">
+                      {(product.name.includes("Mini Pierogue") ||
+                        product.name.includes("Nhoque") ||
+                        product.name.includes(
+                          "Churros de Doce de Leite com Chocolate"
+                        ) ||
+                        product.name.includes("Coxinha de Frango e Catupiry") ||
+                        product.name.includes("Kibe Recheado")) &&
+                      product.weight.includes("1Kg") ? (
+                        <div
+                          className={`${
+                            bgClasses[product.imageName]
+                          } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[1/2] size-full max-w-36 rounded-md`}
+                        ></div>
+                      ) : (
+                        <div
+                          className={`${
+                            bgClasses[product.imageName]
+                          } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[13/18] size-full max-w-52 rounded-md`}
+                        ></div>
+                      )}
+                    </div>
+                    <div className="flex-1 flex flex-col gap-4 pt-4 px-4 w-full">
+                      <h3 className="text-zinc-800 text-xl text-center font-semibold w-full px-4">
+                        {product.name}
+                      </h3>
+                      <Text className="flex-1 text-center w-full">
+                        {product.description}
+                      </Text>
+                      {hasSlug ? (
+                        <Button
+                          className="max-w-full sm:w-full gap-2"
+                          link={`/produtos/${categorySlug}/${product.slug}`}
+                        >
+                          Saiba Mais{" "}
+                          <ChevronRight className="shrink-0 size-5" />
+                        </Button>
+                      ) : hasWhatsapp ? (
+                        <Button
+                          externalLink={
+                            "https://api.whatsapp.com/send/?phone=5542998138118&text=" +
+                            product.messageForWhatsapp
+                          }
+                          isProductLink
+                          bgColor="black"
+                        >
+                          <img
+                            className="size-5"
+                            src="/whatsapp-white.svg"
+                            alt="WhatsApp"
+                          />{" "}
+                          Fazer Pedido
+                        </Button>
+                      ) : null}
+                    </div>
+                  </div>
+                </>
+              );
+            })}
         </div>
       )}
     </>

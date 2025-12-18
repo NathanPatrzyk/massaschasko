@@ -12,7 +12,7 @@ export const generateImageName = (name: string, weight: string) => {
     name
       .toLowerCase()
       .normalize("NFD")
-      .replace(/[\u0300-\u036f,]/g, "") // Remove acentos e vírgulas
+      .replace(/[\u0300-\u036f,]/g, "")
       .replace(/[^\w ]+/g, "")
       .replace(/ +/g, "") +
     weight.toLowerCase().replace(/[\u0300-\u036f,]/g, "")
@@ -26,4 +26,9 @@ export const generateDescription = (weight: string) => {
 export const generateMessageForWhatsapp = (name: string, weight: string) => {
   let text = "Olá, estou interessado no produto: " + name + " " + weight;
   return encodeURI(text.trim().replace(/[\s]/g, "+"));
+};
+
+export const extractWeightFromSlug = (slug: string) => {
+  const match = slug.match(/(\d+(?:kg|g))$/i);
+  return match ? match[1].toLowerCase() : null;
 };

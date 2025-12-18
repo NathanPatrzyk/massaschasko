@@ -10,7 +10,7 @@ import { Product } from "./product";
 import { useFetch } from "../../hooks/useFetch";
 
 export function Products({ pages }) {
-  const { slug } = useParams();
+  const { categorySlug } = useParams();
 
   const [page, setPage] = useState();
 
@@ -19,14 +19,14 @@ export function Products({ pages }) {
 
   useEffect(() => {
     if (pages) {
-      const currentPage = pages.find((p) => p.slug === slug);
+      const currentPage = pages.find((p) => p.slug === categorySlug);
       if (currentPage) {
         setPage(currentPage);
         setPreviousPage(pages.find((p) => p.id === currentPage.id - 1));
         setNextPage(pages.find((p) => p.id === currentPage.id + 1));
       }
     }
-  }, [slug, pages]);
+  }, [categorySlug, pages]);
 
   // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
   const url = "http://localhost:8787";
@@ -39,7 +39,7 @@ export function Products({ pages }) {
     <>
       {loading && (
         <div className="h-screen bg-zinc-100 flex justify-center py-8 md:py-16 pt-24 md:pt-32">
-          <p className="text-zinc-900">Carregando...</p>
+          <p>Carregando...</p>
         </div>
       )}
       {!loading && (
@@ -73,13 +73,13 @@ export function Products({ pages }) {
                 <Subtitle color="green">
                   {category.name} - {category.weight}
                 </Subtitle>
-                <Product category={category} />
+                <Product category={category} categorySlug={categorySlug} />
               </Motion>
             ))}
           <Motion className="flex items-center justify-between w-full">
             {previousPage ? (
               <Link
-                to={`/produtos/${previousPage.slug}`}
+                to={`/produtos/${previousPage.categorySlug}`}
                 className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
               >
                 Anterior
@@ -89,7 +89,7 @@ export function Products({ pages }) {
             )}
             {nextPage && (
               <Link
-                to={`/produtos/${nextPage.slug}`}
+                to={`/produtos/${nextPage.categorySlug}`}
                 className="text-green-600 font-semibold underline transition ease-in-out duration-300 hover:opacity-80"
               >
                 Próximo

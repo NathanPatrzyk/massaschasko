@@ -104,7 +104,7 @@ export default {
       esfihadepizza350g: "url('/esfihadepizza350g.webp')",
       esfihadepalmito350g: "url('/esfihadepalmito350g.webp')",
       esfihadecostela350g: "url('/esfihadecostela350g.webp')",
-      esfihamultigraos350g: "url('/esfihamultigraos350g.webp')",
+      esfihademultigraos350g: "url('/esfihademultigraos350g.webp')",
 
       esfihadecarnemoida12kg: "url('/esfihadecarnemoida12kg.webp')",
       esfihadefrango12kg: "url('/esfihadefrango12kg.webp')",
@@ -115,6 +115,8 @@ export default {
       esfihaabertadecostela400g: "url('/esfihaabertadecostela400g.webp')",
       esfihaabertadechocolatepreto400g:
         "url('/esfihaabertadechocolatepreto400g.webp')",
+      esfihaabertadecalabresa400g: "url('/imagem-vazia.png')",
+      esfihaabertadequeijo400g: "url('/imagem-vazia.png')",
 
       paodequeijocomcheddar500g: "url('/paodequeijocomcheddar500g.webp')",
       paodequeijocomvinagrete500g: "url('/paodequeijocomvinagrete500g.webp')",
