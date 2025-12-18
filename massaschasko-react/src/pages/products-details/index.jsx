@@ -22,7 +22,7 @@ export function ProductsDetails({ pages }) {
   return (
     <>
       {loading && loadingSlugs && (
-        <div className="bg-zinc-100 flex">
+        <div className="h-screen bg-zinc-100 flex justify-center py-8 md:py-16 pt-24 md:pt-32">
           <p>Carregando...</p>
         </div>
       )}
