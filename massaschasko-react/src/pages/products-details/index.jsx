@@ -6,8 +6,8 @@ import { useFetch } from "../../hooks/useFetch";
 export function ProductsDetails({ pages }) {
   const { productSlug, categorySlug } = useParams();
 
-  // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
-  const url = "http://localhost:8787";
+  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  // const url = "http://localhost:8787";
   const slugsUrl = `${url}/pages/products/slugs`;
   const { data: slugMap } = useFetch(slugsUrl);
 
