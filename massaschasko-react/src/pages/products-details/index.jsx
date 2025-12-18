@@ -9,7 +9,7 @@ export function ProductsDetails({ pages }) {
   const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
   // const url = "http://localhost:8787";
   const slugsUrl = `${url}/pages/products/slugs`;
-  const { data: slugMap } = useFetch(slugsUrl);
+  const { data: slugMap, loading: loadingSlugs } = useFetch(slugsUrl);
 
   const productId = slugMap?.find((item) => item.slug === productSlug)?.id;
 
@@ -21,12 +21,12 @@ export function ProductsDetails({ pages }) {
 
   return (
     <>
-      {loading && (
+      {loading && loadingSlugs && (
         <div className="bg-zinc-100 flex">
           <p>Carregando...</p>
         </div>
       )}
-      {!loading && product && (
+      {!loading && !loadingSlugs && product && (
         <Container className="bg-zinc-100 flex flex-col gap-8 py-8 md:py-16 pt-24 md:pt-32 w-full">
           <ProductDetails product={product} categorySlug={categorySlug} />
         </Container>
