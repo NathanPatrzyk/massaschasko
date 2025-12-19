@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 export function Product({ category, categorySlug }) {
-  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
-  // const url = "http://localhost:8787";
+  const url = import.meta.env.VITE_API_URL;
+
   const productsUrl = category
     ? `${url}/pages/categories/${category.id}/products`
     : null;
@@ -79,13 +79,14 @@ export function Product({ category, categorySlug }) {
     esfihadecarnemoida12kg: "bg-esfihadecarnemoida12kg",
     esfihadefrango12kg: "bg-esfihadefrango12kg",
 
-    esfihaabertadecarnemoida400g: "bg-esfihaabertadecarnemoida400g",
-    esfihaabertadefrango400g: "bg-esfihaabertadefrango400g",
     esfihaabertadepizza400g: "bg-esfihaabertadepizza400g",
     esfihaabertadecostela400g: "bg-esfihaabertadecostela400g",
     esfihaabertadechocolatepreto400g: "bg-esfihaabertadechocolatepreto400g",
-    esfihaabertadecalabresa400g: "bg-esfihaabertadecalabresa400g",
-    esfihaabertadequeijo400g: "bg-esfihaabertadequeijo400g",
+
+    esfihaabertadecarnemoida350g: "bg-esfihaabertadecarnemoida350g",
+    esfihaabertadefrango350g: "bg-esfihaabertadefrango350g",
+    esfihaabertadecalabresa350g: "bg-esfihaabertadecalabresa350g",
+    esfihaabertadequeijo350g: "bg-esfihaabertadequeijo350g",
 
     paodequeijocomcheddar500g: "bg-paodequeijocomcheddar500g",
     paodequeijocomvinagrete500g: "bg-paodequeijocomvinagrete500g",
@@ -137,6 +138,13 @@ export function Product({ category, categorySlug }) {
                           className={`${
                             bgClasses[product.imageName]
                           } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[1/2] size-full max-w-36 rounded-md`}
+                        ></div>
+                      ) : product.name.includes("Esfiha Aberta") &&
+                        product.weight.includes("350g") ? (
+                        <div
+                          className={`${
+                            bgClasses[product.imageName]
+                          } bg-contain hover:scale-105 transition ease-in-out duration-300 aspect-[69/59] size-full max-w-52 rounded-md`}
                         ></div>
                       ) : (
                         <div

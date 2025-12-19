@@ -28,8 +28,7 @@ export function Products({ pages }) {
     }
   }, [categorySlug, pages]);
 
-  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
-  // const url = "http://localhost:8787";
+  const url = import.meta.env.VITE_API_URL;
 
   const categoriesUrl = page ? `${url}/pages/${page.id}/categories` : null;
 
