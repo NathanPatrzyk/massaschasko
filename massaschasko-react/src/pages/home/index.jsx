@@ -190,9 +190,9 @@ export function Home({ pages }) {
                   "esfihadepalmito350g",
                   "esfihadecostela350g",
                   "esfihademultigraos350g",
-                  "esfihaabertadecarnemoida400g",
-                  "esfihaabertadefrango400g",
+                  "esfihaabertadecostela400g",
                   "esfihaabertadepizza400g",
+                  "esfihaabertadechocolatepreto400g",
                 ]}
               />
             )
