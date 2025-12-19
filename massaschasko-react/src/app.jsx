@@ -5,16 +5,14 @@ import { About } from "./pages/about";
 import { Products } from "./pages/products";
 import { ProductsDetails } from "./pages/products-details";
 
-import { PreviewProductsDetails } from "./pages/products-details/preview-product-details";
-
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 
 import { useFetch } from "./hooks/useFetch";
 
 export function App() {
-  // const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
-  const url = "http://localhost:8787";
+  const url = "https://massaschasko-api.nathanpatrzyk11.workers.dev";
+  // const url = "http://localhost:8787";
   const pagesUrl = url + "/pages";
 
   const { data: pages, loading, error } = useFetch(pagesUrl);
@@ -33,10 +31,6 @@ export function App() {
           <Route
             path="/produtos"
             element={<Navigate to="/produtos/pierogues" />}
-          />
-          <Route
-            path="/produtos/modelo/modelo"
-            element={<PreviewProductsDetails />}
           />
           <Route
             path="/produtos/:categorySlug/:productSlug"
